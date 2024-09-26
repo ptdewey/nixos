@@ -102,6 +102,7 @@
     gnumake
     bluez
     swayfx
+    # hyprlock
   ];
 
   programs.neovim = {
