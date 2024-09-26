@@ -72,7 +72,7 @@
     curl
     cacert
     firefox-unwrapped
-    firefox-devedition-unwrapped
+    firefox-devedition
     google-chrome
     kitty
     gcc
@@ -84,7 +84,6 @@
     tmux
     unzip
     tree
-    wezterm
     acpi
     fzf
     go
@@ -121,16 +120,12 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.patrick.shell = pkgs.zsh;
 
+  # add missing dynamic libs (do not include in environment.systemPackages)
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      # add missing dynamic libs here
       sqlite
     ];
-  };
-
-  environment.variables = {
-    LD_LIBRARY_PATH = "${pkgs.sqlite}/lib:${builtins.getEnv "LD_LIBRARY_PATH"}";
   };
 
   environment.wordlist = {
