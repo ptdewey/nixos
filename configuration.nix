@@ -126,7 +126,7 @@
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      luajitPackages.luasql-sqlite3
+      sqlite
     ];
   };
 
