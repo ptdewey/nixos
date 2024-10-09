@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
     ];
 
-  nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" "nixpkgs=channel:nixos-unstable"];
+  nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -105,6 +105,7 @@
     hyprlock
     # wezterm
     sqlite
+    luajitPackages.sqlite
   ];
 
   programs.neovim = {
