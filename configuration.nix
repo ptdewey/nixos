@@ -123,12 +123,8 @@
   users.users.patrick.shell = pkgs.zsh;
 
   # add missing dynamic libs (do not include in environment.systemPackages)
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      sqlite
-    ];
-  };
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [ sqlite ];
 
   environment.wordlist = {
     enable = true;
