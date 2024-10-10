@@ -106,6 +106,9 @@
     # wezterm
     # sqlite
     # luajitPackages.sqlite
+    luajit
+    love
+    tiled
   ];
 
   programs.neovim = {
