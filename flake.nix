@@ -21,6 +21,7 @@
         system = "x86_64-linux";
         modules = commonModules ++ [
           ./configuration.nix
+          ./packages/default.nix
           # ./hosts/callisto/hardware-extras.nix
           # ./hosts/callisto/default.nix
           # ./modules/default.nix

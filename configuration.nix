@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
     ];
 
-  # nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" ];
+  nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -106,9 +106,9 @@
     # wezterm
     # sqlite
     # luajitPackages.sqlite
-    luajit
-    love
-    tiled
+    # luajit
+    # love
+    # tiled
   ];
 
   programs.neovim = {
