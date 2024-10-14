@@ -178,12 +178,12 @@
   '';
 
   # TODO: this might be bad lol
-  systemd.services."getty@tty2" = {
-    enable = true;
-    serviceConfig = {
-      ExecStart = [ "/bin/custom-login" ];
-    };
-  };
+  # systemd.services."getty@tty2" = {
+  #   enable = true;
+  #   serviceConfig = {
+  #     ExecStart = [ "/bin/custom-login" ];
+  #   };
+  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
