@@ -48,14 +48,12 @@
     variant = "";
   };
 
-  programs.hyprland.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.patrick = {
     isNormalUser = true;
     description = "Patrick Dewey";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    # packages = with pkgs; [];
   };
 
   # Allow unfree packages
@@ -103,6 +101,7 @@
     bluez
     swayfx
     hyprlock
+    grim
     # wezterm
     # sqlite
     # luajitPackages.sqlite
@@ -110,6 +109,8 @@
     # love
     # tiled
   ];
+
+  programs.hyprland.enable = true;
 
   programs.neovim = {
     enable = true;
