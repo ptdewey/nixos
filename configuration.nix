@@ -69,7 +69,8 @@
     wofi
     curl
     cacert
-    firefox-unwrapped
+    firefox
+    # firefox-unwrapped
     firefox-devedition
     google-chrome
     kitty
@@ -121,6 +122,13 @@
     enable = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
+  };
+
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
   };
 
   services.power-profiles-daemon.enable = true;
