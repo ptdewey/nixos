@@ -103,6 +103,7 @@
     swayfx
     hyprlock
     grim
+    mongodb-ce
     # wezterm
     # sqlite
     # luajitPackages.sqlite
