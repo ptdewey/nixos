@@ -104,7 +104,6 @@
     hyprlock
     grim
     python312
-    python312Packages.pandas
     # wezterm
     # sqlite
     # luajitPackages.sqlite
