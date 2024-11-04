@@ -103,7 +103,8 @@
     swayfx
     hyprlock
     grim
-    mongodb-ce
+    python312
+    python312Packages.pandas
     # wezterm
     # sqlite
     # luajitPackages.sqlite
