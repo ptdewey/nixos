@@ -105,6 +105,7 @@
     grim
     python312
     memtest86plus
+    memtester
     # wezterm
     # sqlite
     # luajitPackages.sqlite
