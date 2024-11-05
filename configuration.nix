@@ -104,6 +104,7 @@
     hyprlock
     grim
     python312
+    memtest86plus
     # wezterm
     # sqlite
     # luajitPackages.sqlite
