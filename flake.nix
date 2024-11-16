@@ -22,7 +22,7 @@
         modules = commonModules ++ [
           ./configuration.nix
           ./packages/default.nix
-          # ./modules/sddm-theme.nix
+          ./modules/sddm-theme.nix
           # ./hosts/callisto/hardware-extras.nix
           # ./hosts/callisto/default.nix
           # ./modules/default.nix
