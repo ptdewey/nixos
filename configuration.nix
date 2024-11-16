@@ -104,9 +104,9 @@
     hyprlock
     grim
     python312
+    libsForQt5.qt5.qtgraphicaleffects
     # wezterm
     # sqlite
-    # luajitPackages.sqlite
     # luajit
     # love
     # tiled
