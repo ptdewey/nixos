@@ -141,6 +141,10 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ sqlite ];
 
+  programs.steam = {
+    enable = true;
+  };
+
   environment.wordlist = {
     enable = true;
     lists = {
