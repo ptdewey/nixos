@@ -105,11 +105,9 @@
     grim
     python312
     libsForQt5.qt5.qtgraphicaleffects
+    spotify
     # wezterm
     # sqlite
-    # luajit
-    # love
-    # tiled
   ];
 
   programs.hyprland.enable = true;
@@ -124,13 +122,6 @@
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
   };
-
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
-  # services.displayManager.sddm = {
-  #     enable = true;
-  #     wayland.enable = true;
-  # };
 
   services.power-profiles-daemon.enable = true;
 
