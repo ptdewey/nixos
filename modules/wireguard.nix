@@ -4,5 +4,5 @@
   };
 
   networking.wireguard.enable = true;
-  networking.wg-quick.interfaces.kelsier.configFile = "/home/patrick/nixos/wireGuardShare.conf";
+  # networking.wg-quick.interfaces.kelsier.configFile = "/home/patrick/nixos/wireGuardShare.conf";
 }
