@@ -114,10 +114,10 @@
 
   programs.hyprland.enable = true;
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  # programs.neovim = {
+  #   enable = true;
+    # defaultEditor = true;
+  # };
 
   programs.zsh = {
     enable = true;
