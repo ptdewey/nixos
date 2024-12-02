@@ -107,6 +107,7 @@
     python312
     libsForQt5.qt5.qtgraphicaleffects
     spotify
+    tinymist
     # wezterm
     # sqlite
   ];
