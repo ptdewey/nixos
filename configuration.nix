@@ -160,6 +160,9 @@
     setSocketVariable = true;
   };
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   # environment.variables = {
   #   LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
   # };
