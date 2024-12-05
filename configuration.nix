@@ -110,7 +110,6 @@
     tinymist
     # wezterm
     # sqlite
-    bottles
   ];
 
   programs.hyprland.enable = true;
