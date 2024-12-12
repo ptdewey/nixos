@@ -5,6 +5,7 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
+    nix.registry.nixpkgs.flake = nixpkgs;
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [
