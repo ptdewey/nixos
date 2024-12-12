@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports =
@@ -110,7 +110,7 @@
     tinymist
     # wezterm
     # sqlite
-  ];
+  ] ++ [ inputs.ags.packages.${pkgs.system}.ags ];
 
   programs.hyprland.enable = true;
 
