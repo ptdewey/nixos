@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
     ];
 
-  nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" ];
+  # nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
