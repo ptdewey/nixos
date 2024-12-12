@@ -5,11 +5,6 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
-    # fix nix-path issues
-    nix.registry.nixpkgs.flake = nixpkgs;
-    environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
-    nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
-
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [
@@ -21,9 +16,15 @@
         # })
       ];
     in {
+      # fix nix-path issues
+      nix.registry.nixpkgs.flake = nixpkgs;
+      environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
+      nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
+
       # define different systems
       callisto = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./configuration.nix
           ./packages/default.nix
