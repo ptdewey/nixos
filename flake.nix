@@ -2,11 +2,6 @@
   description = "Patricks NixOS System Flake";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-
-    ags = {
-      url = "github:aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

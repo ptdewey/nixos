@@ -110,7 +110,6 @@
     # wezterm
     # sqlite
   ];
-  # ] ++ [ inputs.ags.packages.${pkgs.system}.ags ];
 
   programs.hyprland.enable = true;
 
