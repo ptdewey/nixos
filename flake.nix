@@ -5,7 +5,11 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
+    # fix nix-path issues
     nix.registry.nixpkgs.flake = nixpkgs;
+    environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
+    nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
+
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [
