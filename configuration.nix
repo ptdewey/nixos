@@ -107,6 +107,7 @@
     libsForQt5.qt5.qtgraphicaleffects
     spotify
     tinymist
+    lutris
     # wezterm
     # sqlite
   ];
