@@ -149,6 +149,9 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 
+  # tailscale
+  services.tailscale.enable = true;
+
 
   # bluetooth things
   hardware.bluetooth.enable = true;
