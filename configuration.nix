@@ -22,7 +22,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.bridges.br0.interfaces = [ "enp0s3" ]; # Bridge the physical interface.
+  # networking.bridges.br0.interfaces = [ "wlp1s0" ]; # Bridge the physical interface.
 
   # Set your time zone.
   time.timeZone = "America/New_York";
