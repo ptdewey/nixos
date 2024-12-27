@@ -2,9 +2,10 @@
   description = "Patricks NixOS System Flake";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, hyprland-qtutils, ... }@inputs: {
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [

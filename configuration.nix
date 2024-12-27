@@ -5,8 +5,6 @@
       ./hardware-configuration.nix
     ];
 
-  # nix.nixPath = [ "nixos-config=/home/patrick/configuration.nix" ];
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
@@ -22,7 +20,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  # networking.bridges.br0.interfaces = [ "wlp1s0" ]; # Bridge the physical interface.
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -72,7 +69,6 @@
     firefox
     # firefox-unwrapped
     firefox-devedition
-    google-chrome
     kitty
     gcc
     fd
@@ -108,16 +104,14 @@
     libsForQt5.qt5.qtgraphicaleffects
     spotify
     tinymist
-    lutris
     # wezterm
-    # sqlite
   ];
 
   programs.hyprland.enable = true;
 
   # programs.neovim = {
   #   enable = true;
-    # defaultEditor = true;
+  #   defaultEditor = true;
   # };
 
   programs.zsh = {
@@ -150,8 +144,8 @@
   services.udisks2.enable = true;
 
   # tailscale
-  services.tailscale.enable = true;
-
+  # systemd.services.tailscaled.after = ["systemd-networkd-wait-online.service"];
+  # services.tailscale.enable = true;
 
   # bluetooth things
   hardware.bluetooth.enable = true;
@@ -170,7 +164,6 @@
   # environment.variables = {
   #   LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
   # };
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -205,7 +198,7 @@
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # on your system were taken. It's perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
