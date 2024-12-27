@@ -105,6 +105,7 @@
     spotify
     tinymist
     # wezterm
+    inputs.hyprland-qtutils.packages."${pkgs.system}".default
   ];
 
   programs.hyprland.enable = true;
