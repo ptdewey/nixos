@@ -105,7 +105,7 @@
     spotify
     tinymist
     # wezterm
-    inputs.hyprland-qtutils.packages."${pkgs.system}".default
+    inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
   ];
 
   programs.hyprland.enable = true;
@@ -145,8 +145,8 @@
   services.udisks2.enable = true;
 
   # tailscale
-  # systemd.services.tailscaled.after = ["systemd-networkd-wait-online.service"];
-  # services.tailscale.enable = true;
+  services.tailscale.enable = true;
+  systemd.services.tailscaled.after = ["systemd-networkd-wait-online.service"];
 
   # bluetooth things
   hardware.bluetooth.enable = true;
