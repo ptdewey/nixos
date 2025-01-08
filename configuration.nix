@@ -62,7 +62,8 @@
     vim
     wget
     git
-    nemo
+    # nemo
+    nautilus
     wofi
     curl
     cacert
