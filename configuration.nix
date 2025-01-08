@@ -105,7 +105,7 @@
     libsForQt5.qt5.qtgraphicaleffects
     spotify
     tinymist
-    # wezterm
+    wezterm
     inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
   ];
 
