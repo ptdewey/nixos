@@ -108,11 +108,11 @@
     wezterm
     rustup
     fuzzel
-    niri
     inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
   ];
 
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
+  programs.niri.enable = true;
 
   # programs.neovim = {
   #   enable = true;
