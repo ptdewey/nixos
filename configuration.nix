@@ -107,7 +107,7 @@
     tinymist
     wezterm
     rustup
-    fuzzel
+    # fuzzel
     inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
   ];
 
@@ -190,16 +190,8 @@
   # networking.firewall.enable = false;
 
   networking.extraHosts = ''
-    192.168.68.106  kelsier
+    10.0.0.71 luna
   '';
-
-  # TODO: this might be bad lol
-  # systemd.services."getty@tty2" = {
-  #   enable = true;
-  #   serviceConfig = {
-  #     ExecStart = [ "/bin/custom-login" ];
-  #   };
-  # };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
