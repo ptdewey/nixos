@@ -11,8 +11,7 @@
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [
-        ./packages/common.nix
-        ./packages/default.nix
+        ./modules/common.nix
       ];
     in {
       # fix nix-path issues

@@ -88,54 +88,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # git
-    wget
-    gcc
-    # neovim
     vim
-    curl
-    go
-    rustup
+    # neovim
+    # git
     wezterm
     spotify
     discord
-    python312
-    fzf
-    ripgrep
-    tree
-    tmux
-    unzip
-    lm_sensors
     nvtopPackages.amd
-    fd
-    htop
     lutris
-    fastfetch
-    neofetch
-    killall
-    oh-my-posh
-    lsd
-    tree-sitter
-    nodejs
-    xclip
     # wl-clipboard # doesn't work on gnome
+    xclip
   ];
-
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-  };
-
-  users.defaultUserShell = pkgs.zsh;
-  users.users.patrick.shell = pkgs.zsh;
-
-  environment.wordlist = {
-    enable = true;
-    lists = {
-      WORDLIST = [ "${pkgs.scowl}/share/dict/words.txt" ];
-    };
-  };
 
   programs.steam = {
     enable = true;

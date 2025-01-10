@@ -60,30 +60,16 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    wget
-    git
     # nemo
     nautilus
     wofi
-    curl
     cacert
     firefox
     # firefox-unwrapped
     firefox-devedition
     kitty
-    gcc
-    fd
     feh
-    htop
-    killall
-    lm_sensors
-    tmux
-    unzip
-    tree
     acpi
-    fzf
-    go
-    ripgrep
     brightnessctl
     pulseaudio
     copyq
@@ -91,22 +77,18 @@
     swaybg
     scowl
     discord
-    zsh
     wl-clipboard
     xclip
     networkmanagerapplet
-    gnumake
     bluez
     swayfx
     hyprlock
     grim
     slurp
-    python312
     libsForQt5.qt5.qtgraphicaleffects
     spotify
     tinymist
     wezterm
-    rustup
     # fuzzel
     inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
   ];
@@ -114,31 +96,10 @@
   programs.hyprland.enable = true;
   # programs.niri.enable = true;
 
-  # programs.neovim = {
-  #   enable = true;
-  #   defaultEditor = true;
-  # };
-
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-  };
-
   services.power-profiles-daemon.enable = true;
-
-  users.defaultUserShell = pkgs.zsh;
-  users.users.patrick.shell = pkgs.zsh;
 
   programs.steam = {
     enable = true;
-  };
-
-  environment.wordlist = {
-    enable = true;
-    lists = {
-      WORDLIST = [ "${pkgs.scowl}/share/dict/words.txt" ];
-    };
   };
 
   services.gvfs.enable = true;
