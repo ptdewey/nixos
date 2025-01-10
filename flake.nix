@@ -2,6 +2,7 @@
   description = "Patricks NixOS System Flake";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
   };
 
@@ -10,10 +11,6 @@
       # define common modules shared between systems
       commonModules = [
         ./modules/common.nix
-
-        # ({ pkgs, ... }: {
-        #     nixpkgs.overlays = [ neovim-nightly-overlay.overlay ];
-        # })
         ./packages/default.nix
       ];
     in {
