@@ -130,10 +130,6 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.patrick.shell = pkgs.zsh;
 
-  # add missing dynamic libs (do not include in environment.systemPackages)
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [ sqlite ];
-
   programs.steam = {
     enable = true;
   };

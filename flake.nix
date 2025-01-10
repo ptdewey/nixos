@@ -9,12 +9,12 @@
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [
-        # can also include module files here
-        # ./modules/r-env.nix
+        ./modules/common.nix
 
         # ({ pkgs, ... }: {
         #     nixpkgs.overlays = [ neovim-nightly-overlay.overlay ];
         # })
+        ./packages/default.nix
       ];
     in {
       # fix nix-path issues
@@ -23,17 +23,23 @@
       nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
 
       # define different systems
+      europa = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = commonModules ++ [
+          ./hosts/europa/configuration.nix
+          ./modules/desktops/sddm-theme.nix
+          ./modules/desktops/gnome.nix
+        ];
+      };
+
       callisto = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
-          ./configuration.nix
-          ./packages/default.nix
-          ./modules/sddm-theme.nix
-          ./modules/wireguard.nix
+          ./hosts/callisto/configuration.nix
+          ./modules/desktops/sddm-theme.nix
           # ./hosts/callisto/hardware-extras.nix
-          # ./hosts/callisto/default.nix
-          # ./modules/default.nix
         ];
       };
     };

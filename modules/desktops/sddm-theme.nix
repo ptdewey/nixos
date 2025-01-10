@@ -21,4 +21,7 @@ in {
         wayland.enable = true;
         theme = "${sddmTheme}";
     };
+    environment.systemPackages = with pkgs; [
+        libsForQt5.qt5.qtgraphicaleffects
+    ];
 }
