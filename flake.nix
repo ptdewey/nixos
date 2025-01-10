@@ -36,7 +36,6 @@
         modules = commonModules ++ [
           ./hosts/callisto/configuration.nix
           ./modules/desktops/sddm-theme.nix
-          # ./hosts/callisto/hardware-extras.nix
         ];
       };
     };
