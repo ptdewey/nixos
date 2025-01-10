@@ -1,12 +1,13 @@
 {
   description = "Patricks NixOS System Flake";
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
   };
 
-  outputs = { self, nixpkgs, hyprland-qtutils, ... }@inputs: {
+  outputs = { self, nixpkgs, neovim-nightly-overlay, hyprland-qtutils, ... }@inputs: {
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [

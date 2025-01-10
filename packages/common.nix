@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     git
+    tokei
   ];
 
   programs.neovim = {
