@@ -122,8 +122,8 @@
     lsd
     tree-sitter
     nodejs
-    # xclip
-    wl-clipboard
+    xclip
+    # wl-clipboard
   ];
 
   programs.zsh = {
