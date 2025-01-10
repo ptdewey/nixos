@@ -122,7 +122,7 @@
     lsd
     tree-sitter
     nodejs
-    xclip
+    # xclip
     wl-clipboard
   ];
 
