@@ -90,7 +90,6 @@
   environment.systemPackages = with pkgs; [
     vim
     # neovim
-    # git
     wezterm
     spotify
     discord
@@ -98,6 +97,7 @@
     lutris
     # wl-clipboard # doesn't work on gnome
     xclip
+    jellyfin-media-player
   ];
 
   programs.steam = {

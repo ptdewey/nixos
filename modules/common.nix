@@ -26,6 +26,11 @@
     fastfetch
     python312
     gnumake
+    xsv
+    csvlens
+    jq
+    oh-my-posh
+    lshw
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
