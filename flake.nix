@@ -7,11 +7,11 @@
     hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
   };
 
-  outputs = { self, nixpkgs, neovim-nightly-overlay, hyprland-qtutils, ... }@inputs: {
+  outputs = { self, nixpkgs, hyprland-qtutils, ... }@inputs: {
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [
-        ./modules/common.nix
+        ./packages/common.nix
         ./packages/default.nix
       ];
     in {
