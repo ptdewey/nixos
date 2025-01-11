@@ -32,10 +32,10 @@
     profiles.user.databases = [{
       settings = {
         "org/gnome/desktop/interface" = {
-          "cursor-theme" = "Bibata-Modern-Classic";
-          "font-name" = "IosevkaPatrick Nerd Font 16";
-          "document-font-name" = "IosevkaPatrick Nerd Font 11";
-          "monospace-font-name" = "IosevkaPatrick Nerd Font 10";
+          "cursor-theme" = "'Bibata-Modern-Classic'";
+          "font-name" = "'IosevkaPatrick Nerd Font 16'";
+          "document-font-name" = "'IosevkaPatrick Nerd Font 11'";
+          "monospace-font-name" = "'IosevkaPatrick Nerd Font 10'";
           "color-scheme" = "prefer-dark";
           "clock-format" = "12h";
           "gtk-theme" = "Yaru-sage-dark";
@@ -62,6 +62,92 @@
           "switch-to-workspace-2" = "['<Super>2']";
           "switch-to-workspace-3" = "['<Super>3']";
           "switch-to-workspace-4" = "['<Super>4']";
+        };
+        "org/gnome/mutter" = {
+          "dynamic-workspaces" = true;
+        };
+        "org/gnome/settings-daemon/plugins/media-keys" = {
+          "custom-keybindings" = "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']";
+          "help" = "@as []";
+          "magnifier" = "@as []";
+          "magnifier-zoom-in" = "@as []";
+          "magnifier-zoom-out" = "@as []";
+          "screenreader" = "@as []";
+          "screensaver" = "['<Super>Escape']";
+          "www" = "['<Super>b']";
+        };
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+          "binding" = "'<Super>t'";
+          "command" = "'wezterm'";
+          "name" = "'Wezterm'";
+        };
+        "org/gnome/shell/app-switcher" = {
+          "current-workspace-only" = false;
+        };
+        "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+          "blur" = true;
+          "brightness" = "0.59999999999999998";
+          "override-background" = true;
+          "pipeline" = "'pipeline_default'";
+          "sigma" = "30";
+          "static-blur" = true;
+          "style-dash-to-dock" = "0";
+          "unblur-in-overview" = false;
+        };
+        "org/gnome/shell/extensions/dash-to-dock" = {
+          "always-center-icons" = true;
+          "application-counter-overrides-notifications" = true;
+          "apply-custom-theme" = true;
+          "background-opacity" = 0.80000000000000004;
+          "custom-background-color" = false;
+          "custom-theme-shrink" = true;
+          "dance-urgent-applications" = false;
+          "dash-max-icon-size" = "52";
+          "dock-fixed" = true;
+          "dock-position" = "'LEFT'";
+          "extend-height" = true;
+          "height-fraction" = 1.0;
+          "hide-tooltip" = false;
+          "hot-keys" = false;
+          "icon-size-fixed" = false;
+          "isolate-monitors" = false;
+          "middle-click-action" = "'launch'";
+          "multi-monitor" = false;
+          "preferred-monitor" = "-2";
+          "preferred-monitor-by-connector" = "'DP-2'";
+          "preview-size-scale" = 0.20000000000000001;
+          "running-indicator-style" = "'DEFAULT'";
+          "scroll-action" = "'switch-workspace'";
+          "shift-click-action" = "'minimize'";
+          "shift-middle-click-action" = "'launch'";
+          "show-apps-always-in-the-edge" = true;
+          "show-apps-at-top" = false;
+          "show-favorites" = true;
+          "show-icons-emblems" = true;
+          "show-icons-notifications-counter" = false;
+          "show-mounts" = false;
+          "show-mounts-only-mounted" = false;
+          "show-trash" = false;
+          "show-windows-preview" = true;
+          "workspace-agnostic-urgent-windows" = false;
+        };
+        "org/gnome/shell/extensions/user-theme" = {
+          "name" = "'Yaru-sage-dark'";
+        };
+        "org/gnome/shell/keybindings" = {
+          "focus-active-notification" = "@as []";
+          "screenshot" = "@as []";
+          "screenshot-window" = "@as []";
+          "show-screen-recording-ui" = "@as []";
+          "show-screenshot-ui" = "['<Shift><Super>s']";
+          "switch-to-application-1" = "@as []";
+          "switch-to-application-2" = "@as []";
+          "switch-to-application-3" = "@as []";
+          "switch-to-application-4" = "@as []";
+          "toggle-overview" = "@as []";
+        };
+        "org/gtk/settings/file-chooser" = {
+          "clock-format" = "'12h'";
         };
       };
     }];
