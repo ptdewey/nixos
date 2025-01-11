@@ -32,10 +32,10 @@
     profiles.user.databases = [{
       settings = {
         "org/gnome/desktop/interface" = {
-          "cursor-theme" = "'Bibata-Modern-Classic'";
-          "font-name" = "'IosevkaPatrick Nerd Font 16'";
-          "document-font-name" = "'IosevkaPatrick Nerd Font 11'";
-          "monospace-font-name" = "'IosevkaPatrick Nerd Font 10'";
+          "cursor-theme" = "Bibata-Modern-Classic";
+          "font-name" = "IosevkaPatrick Nerd Font 16";
+          "document-font-name" = "IosevkaPatrick Nerd Font 11";
+          "monospace-font-name" = "IosevkaPatrick Nerd Font 10";
           "color-scheme" = "prefer-dark";
           "clock-format" = "12h";
           "gtk-theme" = "Yaru-sage-dark";
@@ -73,13 +73,13 @@
           "magnifier-zoom-in" = "@as []";
           "magnifier-zoom-out" = "@as []";
           "screenreader" = "@as []";
-          "screensaver" = "['<Super>Escape']";
-          "www" = "['<Super>b']";
+          "screensaver" = "[<Super>Escape]";
+          "www" = "[<Super>b]";
         };
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-          "binding" = "'<Super>t'";
-          "command" = "'wezterm'";
-          "name" = "'Wezterm'";
+          "binding" = "<Super>t";
+          "command" = "wezterm";
+          "name" = "Wezterm";
         };
         "org/gnome/shell/app-switcher" = {
           "current-workspace-only" = false;
@@ -88,7 +88,7 @@
           "blur" = true;
           "brightness" = "0.59999999999999998";
           "override-background" = true;
-          "pipeline" = "'pipeline_default'";
+          "pipeline" = "pipeline_default";
           "sigma" = "30";
           "static-blur" = true;
           "style-dash-to-dock" = "0";
@@ -132,7 +132,7 @@
           "workspace-agnostic-urgent-windows" = false;
         };
         "org/gnome/shell/extensions/user-theme" = {
-          "name" = "'Yaru-sage-dark'";
+          "name" = "Yaru-sage-dark";
         };
         "org/gnome/shell/keybindings" = {
           "focus-active-notification" = "@as []";
@@ -147,7 +147,7 @@
           "toggle-overview" = "@as []";
         };
         "org/gtk/settings/file-chooser" = {
-          "clock-format" = "'12h'";
+          "clock-format" = "12h";
         };
       };
     }];
