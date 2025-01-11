@@ -51,38 +51,40 @@
           event-sounds = false;
         };
         "org/gnome/desktop/wm/keybindings" = {
-          "close" = "['<Shift><Super>q']";
-          "move-to-workspace-1" = "['<Shift><Super>1']";
-          "move-to-workspace-2" = "['<Shift><Super>2']";
-          "move-to-workspace-3" = "['<Shift><Super>3']";
-          "move-to-workspace-4" = "['<Shift><Super>4']";
-          "switch-input-source" = "@as []";
-          "switch-input-source-backward" = "@as []";
-          "switch-to-workspace-1" = "['<Super>1']";
-          "switch-to-workspace-2" = "['<Super>2']";
-          "switch-to-workspace-3" = "['<Super>3']";
-          "switch-to-workspace-4" = "['<Super>4']";
+          close = ["<Shift><Super>q"];
+          move-to-workspace-1 = ["<Shift><Super>1"];
+          move-to-workspace-2 = ["<Shift><Super>2"];
+          move-to-workspace-3 = ["<Shift><Super>3"];
+          move-to-workspace-4 = ["<Shift><Super>4"];
+          switch-input-source = "@as []";
+          switch-input-source-backward = "@as []";
+          switch-to-workspace-1 = ["<Super>1"];
+          switch-to-workspace-2 = ["<Super>2"];
+          switch-to-workspace-3 = ["<Super>3"];
+          switch-to-workspace-4 = ["<Super>4"];
         };
         "org/gnome/mutter" = {
           "dynamic-workspaces" = true;
         };
         "org/gnome/settings-daemon/plugins/media-keys" = {
-          "custom-keybindings" = "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']";
-          "help" = "@as []";
-          "magnifier" = "@as []";
-          "magnifier-zoom-in" = "@as []";
-          "magnifier-zoom-out" = "@as []";
-          "screenreader" = "@as []";
-          "screensaver" = "[<Super>Escape]";
-          "www" = "[<Super>b]";
+          custom-keybindings = [
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          ];
+          help = "@as []";
+          magnifier = "@as []";
+          magnifier-zoom-in = "@as []";
+          magnifier-zoom-out = "@as []";
+          screenreader = "@as []";
+          screensaver = ["<Super>Escape"];
+          www = ["<Super>b"];
         };
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-          "binding" = "<Super>t";
-          "command" = "wezterm";
-          "name" = "Wezterm";
+          binding = "<Super>t";
+          command = "wezterm";
+          name = "Wezterm";
         };
         "org/gnome/shell/app-switcher" = {
-          "current-workspace-only" = false;
+          current-workspace-only = false;
         };
         "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
           "blur" = true;
@@ -132,22 +134,22 @@
           "workspace-agnostic-urgent-windows" = false;
         };
         "org/gnome/shell/extensions/user-theme" = {
-          "name" = "Yaru-sage-dark";
+          name = "Yaru-sage-dark";
         };
         "org/gnome/shell/keybindings" = {
-          "focus-active-notification" = "@as []";
-          "screenshot" = "@as []";
-          "screenshot-window" = "@as []";
-          "show-screen-recording-ui" = "@as []";
-          "show-screenshot-ui" = "['<Shift><Super>s']";
-          "switch-to-application-1" = "@as []";
-          "switch-to-application-2" = "@as []";
-          "switch-to-application-3" = "@as []";
-          "switch-to-application-4" = "@as []";
-          "toggle-overview" = "@as []";
+          focus-active-notification = "@as []";
+          screenshot = "@as []";
+          screenshot-window = "@as []";
+          show-screen-recording-ui = "@as []";
+          show-screenshot-ui = ["<Shift><Super>s"];
+          switch-to-application-1 = "@as []";
+          switch-to-application-2 = "@as []";
+          switch-to-application-3 = "@as []";
+          switch-to-application-4 = "@as []";
+          toggle-overview = "@as []";
         };
         "org/gtk/settings/file-chooser" = {
-          "clock-format" = "12h";
+          clock-format = "12h";
         };
       };
     }];
