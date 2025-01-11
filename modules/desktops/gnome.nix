@@ -1,19 +1,30 @@
 # Gnome setup
 { pkgs, ... }:
 {
-  # Enable/disable X11
-  services.xserver.enable = true;
+  services.xserver = {
+    # Enable/disable X11
+    enable =  true;
 
-  # Enable gnome
-  services.xserver.desktopManager.gnome.enable = true;
+    # Enable gnome
+    desktopManager.gnome.enable = true;
+
+    # Enable gdm
+    displayManager.gdm.enable = true;
+  };
 
   # Install packages and extensions
   environment.systemPackages = with pkgs; [
     gnome-tweaks
     gnomeExtensions.blur-my-shell
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.user-themes
+    gnomeExtensions.appindicator
   ];
 
+  # Udev service for systray
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
+
+  # exclude default gnome packages
   environment.gnome.excludePackages = with pkgs; [
     orca
     geary

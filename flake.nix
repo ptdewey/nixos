@@ -25,7 +25,7 @@
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./hosts/europa/configuration.nix
-          ./modules/desktops/sddm-theme.nix
+          # ./modules/desktops/sddm-theme.nix
           ./modules/desktops/gnome.nix
         ];
       };
