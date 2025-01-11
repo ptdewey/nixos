@@ -19,6 +19,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.user-themes
     gnomeExtensions.appindicator
+    yaru-theme
   ];
 
   # Udev service for systray
