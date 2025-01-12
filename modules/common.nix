@@ -31,6 +31,7 @@
     jq
     oh-my-posh
     lshw
+    vlc
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
