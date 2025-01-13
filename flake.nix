@@ -21,21 +21,23 @@
 
       # define different systems
       europa = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./hosts/europa/configuration.nix
           # ./modules/desktops/sddm-theme.nix
           ./modules/desktops/gnome.nix
+
+          { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
       };
 
       callisto = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./hosts/callisto/configuration.nix
           ./modules/desktops/sddm-theme.nix
+
+          { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
       };
     };
