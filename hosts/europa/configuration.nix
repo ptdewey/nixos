@@ -1,12 +1,17 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
