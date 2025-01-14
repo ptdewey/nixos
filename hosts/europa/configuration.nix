@@ -98,7 +98,11 @@
     # wl-clipboard # doesn't work on gnome
     xclip
     jellyfin-media-player
+    lact
   ];
+
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
 
   programs.steam = {
     enable = true;
