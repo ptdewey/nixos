@@ -34,6 +34,7 @@
     vlc
     gnupg
     feh
+    corectrl
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
