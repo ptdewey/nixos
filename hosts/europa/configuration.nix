@@ -104,6 +104,7 @@
     xclip
     jellyfin-media-player
     lact
+    plantuml
   ];
 
   systemd.packages = with pkgs; [ lact ];
