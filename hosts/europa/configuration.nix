@@ -105,6 +105,7 @@
     jellyfin-media-player
     lact
     plantuml
+    obs-studio
   ];
 
   systemd.packages = with pkgs; [ lact ];
