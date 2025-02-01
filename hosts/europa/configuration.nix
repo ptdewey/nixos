@@ -106,6 +106,7 @@
     lact
     plantuml
     obs-studio
+    obs-studio-plugins.obs-pipewire-audio-capture
   ];
 
   systemd.packages = with pkgs; [ lact ];
