@@ -99,7 +99,15 @@
     spotify
     discord
     nvtopPackages.amd
-    lutris
+    lutris (
+      lutris.override {
+        extraPkgs = pkgs: [
+          pkgs.libnghttp2
+          pkgs.winetricks
+        ];
+      }
+    )
+    wineWowPackages.waylandFull
     # wl-clipboard # doesn't work on gnome
     xclip
     jellyfin-media-player
@@ -150,7 +158,7 @@
   # networking.firewall.enable = false;
 
   networking.extraHosts = ''
-    10.0.0.71 luna
+    192.168.68.54 luna
   '';
 
   # This value determines the NixOS release from which the default
