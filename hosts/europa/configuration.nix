@@ -120,6 +120,7 @@
     plantuml
     obs-studio
     obs-studio-plugins.obs-pipewire-audio-capture
+    wowup-cf
   ];
 
   systemd.packages = with pkgs; [ lact ];
