@@ -7,11 +7,16 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-  # boot.initrd.kernelModules = [ "amdgpu" ];
+
+  hardware.opengl.extraPackages32 = with pkgs; [
+    driversi686Linux.amdvlk
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
