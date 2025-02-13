@@ -7,11 +7,16 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-  # boot.initrd.kernelModules = [ "amdgpu" ];
+
+  hardware.opengl.extraPackages32 = with pkgs; [
+    driversi686Linux.amdvlk
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -99,11 +104,23 @@
     spotify
     discord
     nvtopPackages.amd
-    lutris
+    lutris (
+      lutris.override {
+        extraPkgs = pkgs: [
+          pkgs.libnghttp2
+          pkgs.winetricks
+        ];
+      }
+    )
+    wineWowPackages.waylandFull
     # wl-clipboard # doesn't work on gnome
     xclip
     jellyfin-media-player
     lact
+    plantuml
+    obs-studio
+    obs-studio-plugins.obs-pipewire-audio-capture
+    wowup-cf
   ];
 
   systemd.packages = with pkgs; [ lact ];
@@ -147,7 +164,7 @@
   # networking.firewall.enable = false;
 
   networking.extraHosts = ''
-    10.0.0.71 luna
+    192.168.68.54 luna
   '';
 
   # This value determines the NixOS release from which the default

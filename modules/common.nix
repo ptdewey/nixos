@@ -34,6 +34,9 @@
     vlc
     gnupg
     feh
+    zathura
+    fx
+    glow
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
