@@ -37,6 +37,7 @@
     zathura
     fx
     glow
+    websocat
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
