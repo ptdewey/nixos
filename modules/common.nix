@@ -39,6 +39,7 @@
     glow
     websocat
     pandoc
+    ladybird
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
