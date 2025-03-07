@@ -90,7 +90,9 @@
     tinymist
     wezterm
     # fuzzel
-    inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
+    # inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
+    hyprland-qtutils
+    (callPackage ../../modules/applications/zen.nix {})
   ];
 
   programs.hyprland.enable = true;
