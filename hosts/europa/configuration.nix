@@ -124,8 +124,6 @@
     python312Packages.jupytext
     python312Packages.jupyter-core
     python312Packages.jupyterlab
-    pkg-config
-    openssl
   ];
 
   systemd.packages = with pkgs; [ lact ];
