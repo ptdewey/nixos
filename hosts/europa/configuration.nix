@@ -124,7 +124,6 @@
     python312Packages.jupytext
     python312Packages.jupyter-core
     python312Packages.jupyterlab
-    inputs.zen-browser.packages."${system}".beta
   ];
 
   systemd.packages = with pkgs; [ lact ];

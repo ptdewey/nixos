@@ -39,6 +39,7 @@
     glow
     websocat
     pandoc
+    inputs.zen-browser.packages."${system}".beta
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
