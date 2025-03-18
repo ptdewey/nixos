@@ -25,7 +25,6 @@
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./hosts/europa/configuration.nix
-          # ./modules/desktops/sddm-theme.nix
           ./modules/desktops/gnome.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
@@ -37,7 +36,6 @@
         modules = commonModules ++ [
           ./hosts/callisto/configuration.nix
           ./modules/desktops/sddm-theme.nix
-          ./modules/games/lutris.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
