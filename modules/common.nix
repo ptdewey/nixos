@@ -40,6 +40,7 @@
     websocat
     pandoc
     inputs.zen-browser.packages."${system}".beta
+    gimp
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
