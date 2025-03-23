@@ -122,8 +122,6 @@
     obs-studio-plugins.obs-pipewire-audio-capture
     wowup-cf
     python312Packages.jupytext
-    python312Packages.jupyter-core
-    python312Packages.jupyterlab
   ];
 
   systemd.packages = with pkgs; [ lact ];
@@ -131,6 +129,12 @@
 
   programs.steam = {
     enable = true;
+  };
+
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+    rocmOverrideGfx = "11.0.0";
   };
 
   virtualisation.docker.rootless = {
