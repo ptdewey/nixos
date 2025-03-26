@@ -42,6 +42,7 @@
     inputs.zen-browser.packages."${system}".beta
     gimp
     gh
+    yazi
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
