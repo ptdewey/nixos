@@ -4,11 +4,10 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, hyprland-qtutils, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = let
       # define common modules shared between systems
       commonModules = [

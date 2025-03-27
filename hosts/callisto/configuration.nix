@@ -90,7 +90,6 @@
     tinymist
     wezterm
     # fuzzel
-    # inputs.hyprland-qtutils.packages."${pkgs.system}".default # fix hyprland popup
     hyprland-qtutils
   ];
 

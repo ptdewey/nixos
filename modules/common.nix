@@ -26,7 +26,7 @@
     fastfetch
     python312
     gnumake
-    xsv
+    xan
     csvlens
     jq
     oh-my-posh
