@@ -44,6 +44,8 @@
     gh
     yazi
     obsidian
+    signal-cli
+    signal-desktop
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
