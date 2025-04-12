@@ -124,6 +124,9 @@
     python312Packages.jupytext
     qmk
     qmk-udev-rules
+    qmk_hid
+    via
+    vial
   ];
 
   systemd.packages = with pkgs; [ lact ];
