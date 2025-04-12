@@ -122,6 +122,7 @@
     obs-studio-plugins.obs-pipewire-audio-capture
     wowup-cf
     python312Packages.jupytext
+    vial
   ];
 
   systemd.packages = with pkgs; [ lact ];
