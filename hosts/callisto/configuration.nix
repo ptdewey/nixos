@@ -82,7 +82,6 @@
     networkmanagerapplet
     bluez
     swayfx
-    hyprlock
     grim
     slurp
     libsForQt5.qt5.qtgraphicaleffects
@@ -90,10 +89,8 @@
     tinymist
     wezterm
     # fuzzel
-    hyprland-qtutils
   ];
 
-  programs.hyprland.enable = true;
   # programs.niri.enable = true;
 
   services.power-profiles-daemon.enable = true;
