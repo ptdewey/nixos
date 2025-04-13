@@ -62,7 +62,6 @@
     vim
     # nemo
     nautilus
-    wofi
     cacert
     firefox
     # firefox-unwrapped
@@ -72,19 +71,8 @@
     acpi
     brightnessctl
     pulseaudio
-    copyq
-    waybar
-    swaybg
-    scowl
     discord
-    wl-clipboard
-    xclip
-    networkmanagerapplet
-    bluez
     swayfx
-    grim
-    slurp
-    libsForQt5.qt5.qtgraphicaleffects
     spotify
     tinymist
     wezterm
