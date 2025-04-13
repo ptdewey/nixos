@@ -13,5 +13,7 @@
     copyq
     scowl
     wofi
+    pulseaudio
+    playerctl
   ];
 }
