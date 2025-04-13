@@ -122,6 +122,9 @@
     obs-studio-plugins.obs-pipewire-audio-capture
     wowup-cf
     python312Packages.jupytext
+  ];
+
+  services.udev.packages = with pkgs; [
     qmk
     qmk-udev-rules
     qmk_hid
