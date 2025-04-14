@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     waybar
     swaybg
-    wl-clipboard
     xclip
     networkmanagerapplet
     bluez

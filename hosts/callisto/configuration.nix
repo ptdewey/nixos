@@ -76,6 +76,7 @@
     spotify
     tinymist
     wezterm
+    wl-clipboard
     # fuzzel
   ];
 
