@@ -26,6 +26,7 @@
           ./hosts/europa/configuration.nix
           ./modules/desktops/gnome.nix
           ./modules/desktops/hyprland.nix
+          ./modules/games/minecraft.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
