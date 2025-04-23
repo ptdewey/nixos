@@ -47,6 +47,7 @@
     signal-cli
     signal-desktop
     libertinus
+    ungoogled-chromium
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
