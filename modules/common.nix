@@ -46,6 +46,7 @@
     obsidian
     signal-cli
     signal-desktop
+    libertinus
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
