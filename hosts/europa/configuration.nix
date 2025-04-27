@@ -124,6 +124,7 @@
     python312Packages.jupytext
     qmk
     vial
+    audacity
   ];
 
   services.udev.packages = with pkgs; [
