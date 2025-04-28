@@ -125,6 +125,7 @@
     qmk
     vial
     audacity
+    kdePackages.kdenlive
   ];
 
   services.udev.packages = with pkgs; [
