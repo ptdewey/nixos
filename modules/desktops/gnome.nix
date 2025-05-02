@@ -21,6 +21,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.user-themes
     gnomeExtensions.appindicator
+    gnomeExtensions.disable-workspace-switch-animation-for-gnome-40
 
     # GTK theming
     yaru-theme
