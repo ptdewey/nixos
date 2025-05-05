@@ -48,6 +48,8 @@
     signal-desktop
     libertinus
     ungoogled-chromium
+    alacritty
+    ghostty
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
