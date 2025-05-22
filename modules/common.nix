@@ -51,6 +51,7 @@
     alacritty
     ghostty
     zip
+    bambu-studio
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
