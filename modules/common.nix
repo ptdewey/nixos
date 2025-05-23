@@ -52,6 +52,7 @@
     ghostty
     zip
     bambu-studio
+    ast-grep
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
