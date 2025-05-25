@@ -184,7 +184,7 @@
   # networking.firewall.enable = false;
 
   networking.extraHosts = ''
-    192.168.68.54 luna
+    10.0.0.71 luna
   '';
 
   # This value determines the NixOS release from which the default

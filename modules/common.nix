@@ -53,6 +53,8 @@
     zip
     bambu-studio
     ast-grep
+    nmap
+    libreoffice
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
