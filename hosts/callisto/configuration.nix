@@ -77,10 +77,7 @@
     tinymist
     wezterm
     wl-clipboard
-    # fuzzel
   ];
-
-  # programs.niri.enable = true;
 
   services.power-profiles-daemon.enable = true;
 
