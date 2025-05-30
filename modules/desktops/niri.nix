@@ -6,6 +6,8 @@
     xwayland-satellite
     swaylock
     fuzzel
+    xwayland-run
+    gamescope
   ];
 
   programs.niri.enable = true;
