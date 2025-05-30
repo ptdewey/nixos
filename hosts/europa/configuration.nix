@@ -126,6 +126,7 @@
     vial
     audacity
     kdePackages.kdenlive
+    vulkan-tools
   ];
 
   services.udev.packages = with pkgs; [
