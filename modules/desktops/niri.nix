@@ -7,10 +7,11 @@
     swaylock
     fuzzel
     xwayland-run
-    gamescope
   ];
 
   programs.niri.enable = true;
+  programs.gamescope.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 
   systemd.user.services = {
     swaybg = {
