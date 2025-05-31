@@ -14,9 +14,14 @@
     enable32Bit = true;
   };
 
+  # hardware.amdgpu.amdvlk.enable = true;
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
   hardware.graphics.extraPackages32 = with pkgs; [
     driversi686Linux.amdvlk
   ];
+
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
