@@ -51,7 +51,6 @@
     alacritty
     ghostty
     zip
-    bambu-studio
     ast-grep
     nmap
     libreoffice

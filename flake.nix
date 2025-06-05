@@ -3,13 +3,13 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "nixpkgs/nixos-25.05";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = let
-      # define common modules shared between systems
       commonModules = [
         ./modules/common.nix
       ];
@@ -39,6 +39,16 @@
           ./hosts/callisto/configuration.nix
           ./modules/desktops/sddm-theme.nix
           ./modules/desktops/hyprland.nix
+
+          { nixpkgs.hostPlatform = "x86_64-linux"; }
+        ];
+      };
+
+      luna = inputs.nixpkgs-stable.lib.nixosSystem {
+        specialArgs = { inherit inputs; nixpkgs = inputs.nixpkgs-stable; };
+        modules = [ # Don't include common module on Luna
+          ./hosts/luna/configuration.nix
+          ./modules/utilities/jellyfin.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
