@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
-{
+let
+  mediaplayer = import ./extras/waybar-mediaplayer/mediaplayer.nix { pkgs = pkgs; };
+in {
   environment.systemPackages = with pkgs; [
     waybar
     swaybg
@@ -14,5 +16,6 @@
     wofi
     pulseaudio
     playerctl
+    mediaplayer
   ];
 }
