@@ -1,1 +1,4 @@
-modules/desktops/extras/waybar-mediaplayer/* linguist-vendored
+modules/desktops/extras/waybar-mediaplayer/setup.py linguist-vendored
+modules/desktops/extras/waybar-mediaplayer/mediaplayer.nix linguist-vendored
+modules/desktops/extras/waybar-mediaplayer/mediaplayer/player.py linguist-vendored
+modules/desktops/extras/waybar-mediaplayer/mediaplayer/__init__.py linguist-vendored
