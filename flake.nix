@@ -39,6 +39,7 @@
           ./hosts/callisto/configuration.nix
           ./modules/desktops/sddm-theme.nix
           ./modules/desktops/hyprland.nix
+          ./modules/desktops/niri.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
