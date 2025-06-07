@@ -43,7 +43,6 @@
     gimp
     gh
     yazi
-    obsidian
     signal-cli
     signal-desktop
     libertinus
@@ -54,6 +53,8 @@
     ast-grep
     nmap
     libreoffice
+    yaru-theme
+    bibata-cursors
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
