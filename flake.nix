@@ -37,8 +37,6 @@
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./hosts/callisto/configuration.nix
-          # ./modules/desktops/sddm-theme.nix
-          # ./modules/desktops/hyprland.nix
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
 
