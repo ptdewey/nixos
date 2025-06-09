@@ -83,7 +83,7 @@
   users.users.patrick = {
     isNormalUser = true;
     description = "Patrick Dewey";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [ ];
   };
 
