@@ -2,6 +2,8 @@
 {
   imports = [ ./wayland-wm.nix ];
 
+  programs.niri.enable = true;
+
   environment.systemPackages = with pkgs; [
     xwayland-satellite
     swaylock
@@ -9,17 +11,13 @@
     xwayland-run
   ];
 
-  programs.niri.enable = true;
-  programs.gamescope.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-
   systemd.user.services = {
     swaybg = {
       description = "Wallpaper Service";
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/darkstars.png";
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/JapaneseFish.png";
         Restart = "on-failure";
       };
     };

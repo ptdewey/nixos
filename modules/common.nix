@@ -55,6 +55,7 @@
     libreoffice
     yaru-theme
     bibata-cursors
+    typst
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)

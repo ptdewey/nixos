@@ -28,6 +28,7 @@
           ./modules/desktops/hyprland.nix
           ./modules/desktops/niri.nix
           ./modules/games/minecraft.nix
+          ./modules/games/steam.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];

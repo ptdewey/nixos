@@ -84,9 +84,7 @@
     isNormalUser = true;
     description = "Patrick Dewey";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      typst
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Install firefox.
@@ -104,15 +102,6 @@
     spotify
     discord
     nvtopPackages.amd
-    lutris (
-      lutris.override {
-        extraPkgs = pkgs: [
-          pkgs.libnghttp2
-          pkgs.winetricks
-        ];
-      }
-    )
-    wineWowPackages.waylandFull
     # wl-clipboard # doesn't work on gnome
     xclip
     jellyfin-media-player
@@ -120,10 +109,8 @@
     plantuml
     obs-studio
     obs-studio-plugins.obs-pipewire-audio-capture
-    wowup-cf
     python312Packages.jupytext
     qmk
-    vial
     audacity
     kdePackages.kdenlive
     vulkan-tools
@@ -133,17 +120,12 @@
     qmk
     qmk-udev-rules
     qmk_hid
-    via
-    vial
   ];
 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
-  programs.steam = {
-    enable = true;
-  };
-
+  # TODO: pin a version of ollama to avoid long build times
   services.ollama = {
     enable = true;
     acceleration = "rocm";
