@@ -79,6 +79,8 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.patrick.shell = pkgs.zsh;
 
+  services.gvfs.enable = true;
+
   # Dictionary word list (used with nvim)
   environment.wordlist = {
     enable = true;
