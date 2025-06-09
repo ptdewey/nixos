@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 let
   mediaplayer = import ./extras/waybar-mediaplayer/mediaplayer.nix { pkgs = pkgs; };
 in {
@@ -17,5 +17,7 @@ in {
     pulseaudio
     playerctl
     mediaplayer
+
+    inputs.quickshell.packages."x86_64-linux".default
   ];
 }
