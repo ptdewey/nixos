@@ -19,6 +19,8 @@ in {
     mediaplayer
     cava
     material-symbols
+    material-icons
+    weather-icons
 
     inputs.quickshell.packages.${pkgs.system}.default
   ];
