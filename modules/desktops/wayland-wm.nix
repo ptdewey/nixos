@@ -17,7 +17,9 @@ in {
     pulseaudio
     playerctl
     mediaplayer
+    cava
+    material-symbols
 
-    inputs.quickshell.packages."x86_64-linux".default
+    inputs.quickshell.packages.${pkgs.system}.default
   ];
 }
