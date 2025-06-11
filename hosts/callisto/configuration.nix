@@ -76,7 +76,6 @@
     spotify
     tinymist
     wezterm
-    wl-clipboard
   ];
 
   services.power-profiles-daemon.enable = true;
