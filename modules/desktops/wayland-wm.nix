@@ -18,6 +18,7 @@
     material-icons
     weather-icons
     wl-clipboard
+    swww
 
     (import ./extras/waybar-mediaplayer/mediaplayer.nix {pkgs = pkgs; })
     inputs.quickshell.packages.${pkgs.system}.default

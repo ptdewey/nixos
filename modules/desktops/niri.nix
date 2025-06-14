@@ -1,4 +1,5 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
+
 {
   imports = [ ./wayland-wm.nix ];
 
@@ -18,6 +19,16 @@
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
         ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/ferns.png";
+        Restart = "on-failure";
+      };
+    };
+
+    swww = {
+      description = "Wallpaper Service";
+      after = [ "niri.service" ];
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.swww}/bin/swww restore"; # NOTE: might need to initialize the daemon with `swww-daemon`
         Restart = "on-failure";
       };
     };
