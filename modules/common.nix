@@ -56,6 +56,7 @@
     yaru-theme
     bibata-cursors
     typst
+    opencode
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
