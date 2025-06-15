@@ -73,8 +73,8 @@ in
 
   # ZFS pool filesystem
   fileSystems."/zpool" = {
-                device = "zpool/vault";
-                fsType = "zfs";
+    device = "zpool/vault";
+    fsType = "zfs";
   };
 
   # Set your time zone.
@@ -165,6 +165,7 @@ in
     rustup
     nvtopPackages.full
     cudaPackages.cuda_nvcc
+    nvidia-modprobe
   ];
 
   virtualisation.docker.rootless = {
