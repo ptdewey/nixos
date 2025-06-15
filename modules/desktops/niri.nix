@@ -28,7 +28,7 @@
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.swww}/bin/swww restore"; # NOTE: might need to initialize the daemon with `swww-daemon`
+        ExecStart = "${pkgs.swww}/bin/swww-daemon";
         Restart = "on-failure";
       };
     };
