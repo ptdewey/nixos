@@ -59,6 +59,9 @@
     # opencode # TODO: install once it updates to the 1.49+ sst version (can't get 0.49 to work)
     bun
     caligula
+    mpv
+    mpd
+    # amberol
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
