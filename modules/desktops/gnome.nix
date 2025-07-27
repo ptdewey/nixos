@@ -1,9 +1,9 @@
 # Gnome setup
 { pkgs, ... }:
 {
-  services.xserver = {
+  services = {
     # Enable/disable X11
-    enable =  true;
+    xserver.enable =  true;
 
     # Enable gnome
     desktopManager.gnome.enable = true;

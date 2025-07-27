@@ -9,6 +9,9 @@ pkgs.python3Packages.buildPythonApplication {
     pygobject3
   ];
 
+  pyproject = true;
+  build-system = [pkgs.python313Packages.setuptools];
+
   buildInputs = with pkgs; [
     gobject-introspection
     playerctl
