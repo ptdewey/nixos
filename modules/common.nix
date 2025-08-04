@@ -68,7 +68,9 @@
     go-mockery
     inotify-tools
     luajit
+    luajitPackages.luarocks
     fennel
+    fennel-ls
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
