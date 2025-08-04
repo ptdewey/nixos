@@ -67,6 +67,8 @@
     just
     go-mockery
     inotify-tools
+    luajit
+    fennel
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
