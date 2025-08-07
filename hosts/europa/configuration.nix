@@ -155,11 +155,6 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  # Adjust systemd timeout time to speed up shutdown
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=10s
-  '';
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
