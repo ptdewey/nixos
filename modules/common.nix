@@ -69,6 +69,7 @@
     inotify-tools
     luajit
     luajitPackages.luarocks
+    luajitPackages.jsregexp
     fennel
     fennel-ls
     fnlfmt

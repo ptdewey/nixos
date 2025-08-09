@@ -23,12 +23,22 @@
       };
     };
 
-    swww = {
-      description = "Wallpaper Service";
+    swww-daemon = {
+      description = "Animated Wallpaper Daemon";
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
         ExecStart = "${pkgs.swww}/bin/swww-daemon";
+        Restart = "on-failure";
+      };
+    };
+
+    swww = {
+      description = "Animated Wallpaper Setter";
+      after = ["swww-dameon.service"];
+      wantedBy = ["graphical-session.target"];
+      serviceConfig = {
+        ExecStart = "${pkgs.swww}/bin/swww --restore";
         Restart = "on-failure";
       };
     };
