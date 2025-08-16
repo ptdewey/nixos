@@ -86,7 +86,7 @@
     enable = true;
     defaultEditor = true;
     # Use nightly if there are ever issues with stable
-    # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
   # ZSH
