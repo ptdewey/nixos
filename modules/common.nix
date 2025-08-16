@@ -61,7 +61,6 @@
     caligula
     mpv
     mpd
-    # amberol
     stylua
     luajitPackages.luacheck
     just
@@ -73,6 +72,8 @@
     fennel
     fennel-ls
     fnlfmt
+    cmake
+    zig
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
