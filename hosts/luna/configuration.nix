@@ -119,7 +119,7 @@ in
       patrick = {
         isNormalUser = true;
         description = "Patrick Dewey";
-        extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+        extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
         packages = with pkgs; [
           typst
           pandoc
@@ -168,9 +168,8 @@ in
     nvidia-modprobe
   ];
 
-  virtualisation.docker.rootless = {
+  virtualisation.docker = {
     enable = true;
-    setSocketVariable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -198,13 +197,13 @@ in
     };
   };
 
-  services.ollama = {
-    package = unstablePkgs.ollama;
-    enable = true;
-    acceleration = "cuda";
-    host = "0.0.0.0";
-    openFirewall = true;
-  };
+  # services.ollama = {
+  #   package = unstablePkgs.ollama;
+  #   enable = true;
+  #   acceleration = "cuda";
+  #   host = "0.0.0.0";
+  #   openFirewall = true;
+  # };
 
   # ZFS scrubbing (once a week)
   services.zfs.autoScrub.enable = true;
@@ -244,6 +243,9 @@ in
 
   # Tailscale
   services.tailscale.enable = true;
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [ sqlite ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
