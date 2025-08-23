@@ -7,30 +7,62 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  # boot.initrd.kernelModules = [ "amdgpu" ];
 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
 
-  hardware.graphics.extraPackages32 = with pkgs; [
-    driversi686Linux.amdvlk
-  ];
+  # hardware.graphics.extraPackages = with pkgs; [
+  #   amdvlk
+  # ];
+
+  # hardware.graphics.extraPackages32 = with pkgs; [
+  #   driversi686Linux.amdvlk
+  # ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "europa"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking = {
+    hostName = "europa";
+    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Configure network proxy if necessary
+    # networking.proxy.default = "http://user:password@proxy:port/";
+    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+    # Enable networking
+    networkmanager = {
+      enable = true;
+      dns = "none";
+    };
+
+    # nameservers = [ "10.0.0.71" "1.1.1.1" "8.8.8.8" ];
+    # dhcpcd.extraConfig = "nohook resolv.conf";
+
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    # networking.firewall.enable = false;
+
+    extraHosts = ''
+      10.0.0.71 luna
+    '';
+  };
+
+  environment.etc."resolv.conf" = {
+    text = ''
+      nameserver 10.0.0.71
+      nameserver 1.1.1.1
+      nameserver 8.8.8.8
+      search pdewey.com
+    '';
+    mode = "0644";
+  };
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -116,21 +148,17 @@
     vulkan-tools
   ];
 
-  services.udev.packages = with pkgs; [
-    qmk
-    qmk-udev-rules
-    qmk_hid
-  ];
+  services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];
 
   systemd.packages = with pkgs; [ lact ];
-  systemd.services.lactd.wantedBy = ["multi-user.target"];
+  systemd.services.lactd.wantedBy = [ "multi-user.target" ];
 
   # TODO: pin a version of ollama to avoid long build times
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-    rocmOverrideGfx = "11.0.0";
-  };
+  # services.ollama = {
+  #   enable = true;
+  #   acceleration = "rocm";
+  #   rocmOverrideGfx = "11.0.0";
+  # };
 
   virtualisation.docker.rootless = {
     enable = true;
@@ -154,16 +182,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  networking.extraHosts = ''
-    10.0.0.71 luna
-  '';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

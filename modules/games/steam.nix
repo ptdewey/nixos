@@ -6,5 +6,7 @@
     gamescopeSession.enable = true;
   };
 
-  programs.gamescope.enable = true;
+  programs.gamescope = {
+    enable = true;
+  };
 }
