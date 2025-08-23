@@ -35,33 +35,16 @@
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Enable networking
-    networkmanager = {
-      enable = true;
-      dns = "none";
-    };
-
-    # nameservers = [ "10.0.0.71" "1.1.1.1" "8.8.8.8" ];
-    # dhcpcd.extraConfig = "nohook resolv.conf";
+    networkmanager = { enable = true; };
+    nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
     # Open ports in the firewall.
-    # networking.firewall.allowedTCPPorts = [ ... ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
-    # Or disable the firewall altogether.
-    # networking.firewall.enable = false;
+    # firewall.allowedTCPPorts = [ ... ];
+    # firewall.allowedUDPPorts = [ ... ];
 
     extraHosts = ''
       10.0.0.71 luna
     '';
-  };
-
-  environment.etc."resolv.conf" = {
-    text = ''
-      nameserver 10.0.0.71
-      nameserver 1.1.1.1
-      nameserver 8.8.8.8
-      search pdewey.com
-    '';
-    mode = "0644";
   };
 
   # Set your time zone.
