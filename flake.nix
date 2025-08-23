@@ -57,6 +57,7 @@
         modules = [ # Don't include common module on Luna
           ./hosts/luna/configuration.nix
           ./modules/utilities/jellyfin.nix
+          ./modules/utilities/forgejo.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];

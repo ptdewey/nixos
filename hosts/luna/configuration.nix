@@ -66,8 +66,8 @@ in
       allowPing = true;
 
       # Open ports in the firewall.
-      # allowedTCPPorts = [ ... ];
-      # allowedUDPPorts = [ ... ];
+      allowedTCPPorts = [ 22 3000 11975 21975 ];
+      allowedUDPPorts = [ 22 3000 11975 21975 ];
     };
   };
 
