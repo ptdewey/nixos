@@ -59,8 +59,8 @@
       nameserver 10.0.0.71
       nameserver 1.1.1.1
       nameserver 8.8.8.8
-      search pdewey.com
-      search solanaceae.net
+      # search pdewey.com
+      # search solanaceae.net
     '';
     mode = "0644";
   };
