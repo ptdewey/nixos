@@ -77,6 +77,8 @@
     tinymist
     wezterm
     gleam
+    beamMinimal28Packages.erlang
+    beamMinimal28Packages.elixir
   ];
 
   services.power-profiles-daemon.enable = true;
