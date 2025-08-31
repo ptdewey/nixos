@@ -76,6 +76,7 @@
     spotify
     tinymist
     wezterm
+    gleam
   ];
 
   services.power-profiles-daemon.enable = true;
