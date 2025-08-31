@@ -30,7 +30,6 @@
         modules = commonModules ++ [
           ./hosts/europa/configuration.nix
           ./modules/desktops/gnome.nix
-          ./modules/desktops/hyprland.nix
           ./modules/desktops/niri.nix
           ./modules/games/minecraft.nix
           ./modules/utilities/proton.nix

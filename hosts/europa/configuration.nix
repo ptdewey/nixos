@@ -83,17 +83,12 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
@@ -120,24 +115,18 @@
     packages = with pkgs; [ ];
   };
 
-  # Install firefox.
   programs.firefox.enable = true;
-
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    # neovim
     wezterm
     spotify
     discord
     nvtopPackages.amd
-    # wl-clipboard # doesn't work on gnome
     xclip
-    jellyfin-media-player
     lact
     plantuml
     obs-studio

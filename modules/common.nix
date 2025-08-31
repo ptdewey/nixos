@@ -43,10 +43,7 @@
     gimp
     gh
     yazi
-    signal-cli
     signal-desktop
-    libertinus
-    ungoogled-chromium
     alacritty
     ghostty
     zip
