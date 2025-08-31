@@ -74,6 +74,9 @@
     ninja
     izrss
     gleam
+    beam28Packages.erlang
+    beam28Packages.elixir
+    beam28Packages.rebar3
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
