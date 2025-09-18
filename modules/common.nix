@@ -43,7 +43,6 @@
     gimp
     gh
     yazi
-    signal-desktop
     alacritty
     ghostty
     zip
@@ -54,7 +53,6 @@
     bibata-cursors
     typst
     opencode
-    bun
     caligula
     mpv
     mpd
@@ -70,13 +68,13 @@
     fennel-ls
     fnlfmt
     cmake
-    zig
     ninja
     izrss
     gleam
     beam28Packages.erlang
     beam28Packages.elixir
     beam28Packages.rebar3
+    obsidian
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
@@ -105,8 +103,6 @@
   # Dictionary word list (used with nvim)
   environment.wordlist = {
     enable = true;
-    lists = {
-      WORDLIST = [ "${pkgs.scowl}/share/dict/words.txt" ];
-    };
+    lists = { WORDLIST = [ "${pkgs.scowl}/share/dict/words.txt" ]; };
   };
 }
