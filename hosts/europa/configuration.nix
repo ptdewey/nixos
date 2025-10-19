@@ -134,6 +134,7 @@
     audacity
     kdePackages.kdenlive
     vulkan-tools
+    openmw
   ];
 
   services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];
