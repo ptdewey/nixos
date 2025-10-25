@@ -18,7 +18,7 @@
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/ferns.png";
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/evergarden.png";
         Restart = "on-failure";
       };
     };

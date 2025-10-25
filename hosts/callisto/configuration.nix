@@ -92,7 +92,7 @@
   systemd.services.tailscaled.after = ["systemd-networkd-wait-online.service"];
 
   # bluetooth things
-  hardware.bluetooth.enable = true;
+hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
@@ -104,6 +104,7 @@
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+
 
   # environment.variables = {
   #   LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
