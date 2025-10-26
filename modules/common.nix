@@ -76,6 +76,7 @@
     beam28Packages.rebar3
     obsidian
     love
+    jujutsu
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
