@@ -77,6 +77,10 @@
     obsidian
     love
     jujutsu
+    nix-index
+    aonsoku
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
@@ -88,7 +92,7 @@
     enable = true;
     defaultEditor = true;
     # Use nightly if there are ever issues with stable
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
   # ZSH
