@@ -135,6 +135,12 @@
     kdePackages.kdenlive
     vulkan-tools
     # openmw
+    obsidian
+    love
+    aonsoku
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
   ];
 
   services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];

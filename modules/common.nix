@@ -69,18 +69,12 @@
     fnlfmt
     cmake
     ninja
-    izrss
     gleam
     beam28Packages.erlang
     beam28Packages.elixir
     beam28Packages.rebar3
-    obsidian
-    love
     jujutsu
     nix-index
-    aonsoku
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
