@@ -30,7 +30,6 @@
           ./modules/desktops/gnome.nix
           ./modules/desktops/niri.nix
           ./modules/games/minecraft.nix
-          ./modules/utilities/proton.nix
           ./modules/games/steam.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
@@ -43,7 +42,6 @@
           ./hosts/callisto/configuration.nix
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
-          ./modules/utilities/proton.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
