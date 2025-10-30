@@ -18,29 +18,29 @@
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/evergarden.png";
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -m fill -i %h/Pictures/wallpapers/ferns.png";
         Restart = "on-failure";
       };
     };
 
-    swww-daemon = {
-      description = "Animated Wallpaper Daemon";
-      after = [ "niri.service" ];
-      wantedBy = [ "graphical-session.target" ];
-      serviceConfig = {
-        ExecStart = "${pkgs.swww}/bin/swww-daemon";
-        Restart = "on-failure";
-      };
-    };
+    # swww-daemon = {
+    #   description = "Animated Wallpaper Daemon";
+    #   after = [ "niri.service" ];
+    #   wantedBy = [ "graphical-session.target" ];
+    #   serviceConfig = {
+    #     ExecStart = "${pkgs.swww}/bin/swww-daemon";
+    #     Restart = "on-failure";
+    #   };
+    # };
 
-    swww = {
-      description = "Animated Wallpaper Setter";
-      after = ["swww-dameon.service"];
-      wantedBy = ["graphical-session.target"];
-      serviceConfig = {
-        ExecStart = "${pkgs.swww}/bin/swww --restore";
-        Restart = "on-failure";
-      };
-    };
+    # swww = {
+    #   description = "Animated Wallpaper Setter";
+    #   after = ["swww-dameon.service"];
+    #   wantedBy = ["graphical-session.target"];
+    #   serviceConfig = {
+    #     ExecStart = "${pkgs.swww}/bin/swww --restore";
+    #     Restart = "on-failure";
+    #   };
+    # };
   };
 }
