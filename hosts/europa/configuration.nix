@@ -137,10 +137,11 @@
     # openmw
     obsidian
     love
-    proton-authenticator
     protonmail-desktop
-    proton-pass
     protonvpn-gui
+    proton-authenticator
+    proton-pass
+    picard
   ];
 
   services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];
