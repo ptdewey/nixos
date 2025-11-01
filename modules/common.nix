@@ -75,6 +75,7 @@
     beam28Packages.rebar3
     jujutsu
     nix-index
+    ffmpeg
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
