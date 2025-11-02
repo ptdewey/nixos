@@ -134,7 +134,6 @@
     audacity
     kdePackages.kdenlive
     vulkan-tools
-    # openmw
     obsidian
     love
     protonmail-desktop
@@ -142,6 +141,7 @@
     proton-authenticator
     proton-pass
     picard
+    # openmw # FIX: build is failing?
   ];
 
   services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];
