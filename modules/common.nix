@@ -9,7 +9,6 @@
     gcc
     curl
     go
-    rustup
     fzf
     ripgrep
     tree
@@ -76,6 +75,10 @@
     jujutsu
     nix-index
     ffmpeg
+    rustc
+    cargo
+    rust-analyzer
+    rustfmt
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
