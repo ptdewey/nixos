@@ -79,6 +79,7 @@
     cargo
     rust-analyzer
     rustfmt
+    lld
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
