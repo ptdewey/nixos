@@ -25,10 +25,8 @@
     fastfetch
     python312
     gnumake
-    xan
     csvlens
     jq
-    oh-my-posh
     lshw
     vlc
     gnupg
@@ -79,7 +77,6 @@
     cargo
     rust-analyzer
     rustfmt
-    lld
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)

@@ -44,7 +44,7 @@
     # dhcpcd.extraConfig = "nohook resolv.conf";
 
     # Open ports in the firewall.
-    # networking.firewall.allowedTCPPorts = [ ... ];
+    # firewall.allowedTCPPorts = [ 8000 ];
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
     # networking.firewall.enable = false;
@@ -165,6 +165,9 @@
   programs.virt-manager.enable = true;
 
   services.tailscale.enable = true;
+
+  # Allow cross compilation of armv7
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
