@@ -166,7 +166,7 @@
 
   services.tailscale.enable = true;
 
-  # Allow cross compilation of armv7
+  # Allow cross compilation of armv8
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   # Some programs need SUID wrappers, can be configured further or are

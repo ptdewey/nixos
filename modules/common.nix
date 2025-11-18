@@ -61,7 +61,7 @@
     luajit
     luajitPackages.luarocks
     luajitPackages.jsregexp
-    fennel
+    luaPackages.fennel
     fennel-ls
     fnlfmt
     cmake
