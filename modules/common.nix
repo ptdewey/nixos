@@ -25,10 +25,8 @@
     fastfetch
     python312
     gnumake
-    xan
     csvlens
     jq
-    oh-my-posh
     lshw
     vlc
     gnupg
@@ -63,7 +61,7 @@
     luajit
     luajitPackages.luarocks
     luajitPackages.jsregexp
-    fennel
+    luaPackages.fennel
     fennel-ls
     fnlfmt
     cmake
@@ -78,7 +76,7 @@
     rustc
     cargo
     rust-analyzer
-     rustfmt
+    rustfmt
     lld
   ];
 
