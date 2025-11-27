@@ -76,6 +76,7 @@
     spotify
     tinymist
     wezterm
+    inputs.noctalia.packages.${system}.default
   ];
 
   services.power-profiles-daemon.enable = true;
