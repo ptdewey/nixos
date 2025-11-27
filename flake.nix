@@ -4,13 +4,17 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "nixpkgs/nixos-25.05";
-    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
-    # quickshell = {
-    #   url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";  
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -42,6 +46,7 @@
           ./hosts/callisto/configuration.nix
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
+          # ./noctalia.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
