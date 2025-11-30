@@ -5,7 +5,6 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "nixpkgs/nixos-25.05";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,7 +45,6 @@
           ./hosts/callisto/configuration.nix
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
-          # ./noctalia.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
