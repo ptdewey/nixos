@@ -12,7 +12,7 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";  
+      inputs.quickshell.follows = "quickshell";
     };
   };
 
@@ -34,6 +34,7 @@
           ./modules/desktops/niri.nix
           ./modules/games/minecraft.nix
           ./modules/games/steam.nix
+          ./modules/games/lutris.nix
 
           { nixpkgs.hostPlatform = "x86_64-linux"; }
         ];
