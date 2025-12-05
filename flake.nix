@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "nixpkgs/nixos-25.11";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
