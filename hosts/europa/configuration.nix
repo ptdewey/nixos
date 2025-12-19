@@ -54,6 +54,10 @@
     '';
   };
 
+  hardware.bluetooth.enable = true;
+  # hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   environment.etc."resolv.conf" = {
     text = ''
       nameserver 10.0.0.71
