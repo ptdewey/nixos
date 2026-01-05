@@ -1,9 +1,8 @@
 # Gnome setup
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   services = {
     # Enable/disable X11
-    xserver.enable =  true;
+    xserver.enable = true;
 
     # Enable gnome
     desktopManager.gnome.enable = true;
@@ -48,25 +47,21 @@
           "natural-scroll" = false;
           "speed" = -0.19650655021834063;
         };
-        "org/gnome/desktop/sound" = {
-          event-sounds = false;
-        };
+        "org/gnome/desktop/sound" = { event-sounds = false; };
         "org/gnome/desktop/wm/keybindings" = {
-          close = ["<Shift><Super>q"];
-          move-to-workspace-1 = ["<Shift><Super>1"];
-          move-to-workspace-2 = ["<Shift><Super>2"];
-          move-to-workspace-3 = ["<Shift><Super>3"];
-          move-to-workspace-4 = ["<Shift><Super>4"];
+          close = [ "<Shift><Super>q" ];
+          move-to-workspace-1 = [ "<Shift><Super>1" ];
+          move-to-workspace-2 = [ "<Shift><Super>2" ];
+          move-to-workspace-3 = [ "<Shift><Super>3" ];
+          move-to-workspace-4 = [ "<Shift><Super>4" ];
           switch-input-source = "@as []";
           switch-input-source-backward = "@as []";
-          switch-to-workspace-1 = ["<Super>1"];
-          switch-to-workspace-2 = ["<Super>2"];
-          switch-to-workspace-3 = ["<Super>3"];
-          switch-to-workspace-4 = ["<Super>4"];
+          switch-to-workspace-1 = [ "<Super>1" ];
+          switch-to-workspace-2 = [ "<Super>2" ];
+          switch-to-workspace-3 = [ "<Super>3" ];
+          switch-to-workspace-4 = [ "<Super>4" ];
         };
-        "org/gnome/mutter" = {
-          "dynamic-workspaces" = true;
-        };
+        "org/gnome/mutter" = { "dynamic-workspaces" = true; };
         "org/gnome/settings-daemon/plugins/media-keys" = {
           custom-keybindings = [
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
@@ -76,17 +71,16 @@
           magnifier-zoom-in = "@as []";
           magnifier-zoom-out = "@as []";
           screenreader = "@as []";
-          screensaver = ["<Super>Escape"];
-          www = ["<Super>b"];
+          screensaver = [ "<Super>Escape" ];
+          www = [ "<Super>b" ];
         };
-        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-          binding = "<Super>t";
-          command = "wezterm";
-          name = "Wezterm";
-        };
-        "org/gnome/shell/app-switcher" = {
-          current-workspace-only = false;
-        };
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" =
+          {
+            binding = "<Super>t";
+            command = "wezterm";
+            name = "Wezterm";
+          };
+        "org/gnome/shell/app-switcher" = { current-workspace-only = false; };
         "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
           "blur" = true;
           "brightness" = "0.59999999999999998";
@@ -101,7 +95,7 @@
           "always-center-icons" = true;
           "application-counter-overrides-notifications" = true;
           "apply-custom-theme" = true;
-          "background-opacity" = 0.80000000000000004;
+          "background-opacity" = 0.8;
           "custom-background-color" = false;
           "custom-theme-shrink" = true;
           "dance-urgent-applications" = false;
@@ -118,7 +112,7 @@
           "multi-monitor" = false;
           "preferred-monitor" = "-2";
           "preferred-monitor-by-connector" = "'DP-2'";
-          "preview-size-scale" = 0.20000000000000001;
+          "preview-size-scale" = 0.2;
           "running-indicator-style" = "'DEFAULT'";
           "scroll-action" = "'switch-workspace'";
           "shift-click-action" = "'minimize'";
@@ -134,24 +128,20 @@
           "show-windows-preview" = true;
           "workspace-agnostic-urgent-windows" = false;
         };
-        "org/gnome/shell/extensions/user-theme" = {
-          name = "Yaru-sage-dark";
-        };
+        "org/gnome/shell/extensions/user-theme" = { name = "Yaru-sage-dark"; };
         "org/gnome/shell/keybindings" = {
           focus-active-notification = "@as []";
           screenshot = "@as []";
           screenshot-window = "@as []";
           show-screen-recording-ui = "@as []";
-          show-screenshot-ui = ["<Shift><Super>s"];
+          show-screenshot-ui = [ "<Shift><Super>s" ];
           switch-to-application-1 = "@as []";
           switch-to-application-2 = "@as []";
           switch-to-application-3 = "@as []";
           switch-to-application-4 = "@as []";
           toggle-overview = "@as []";
         };
-        "org/gtk/settings/file-chooser" = {
-          clock-format = "12h";
-        };
+        "org/gtk/settings/file-chooser" = { clock-format = "12h"; };
       };
     }];
   };

@@ -145,6 +145,7 @@
     proton-authenticator
     proton-pass
     picard
+    yt-dlp
     # openmw # FIX: build is failing?
   ];
 
