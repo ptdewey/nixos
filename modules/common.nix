@@ -80,6 +80,7 @@
     lld
     nh
     feishin
+    atproto-goat
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
