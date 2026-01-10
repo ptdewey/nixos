@@ -1,9 +1,7 @@
 { pkgs, inputs, ... }:
+
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [ ./hardware-configuration.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -82,19 +80,18 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
-  programs.steam = {
-    enable = true;
-  };
+  programs.steam = { enable = true; };
 
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 
   # tailscale
   services.tailscale.enable = true;
-  systemd.services.tailscaled.after = ["systemd-networkd-wait-online.service"];
+  systemd.services.tailscaled.after =
+    [ "systemd-networkd-wait-online.service" ];
 
   # bluetooth things
-hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
@@ -106,7 +103,6 @@ hardware.bluetooth.enable = true;
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-
 
   # environment.variables = {
   #   LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.so";
