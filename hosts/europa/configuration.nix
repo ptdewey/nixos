@@ -53,7 +53,6 @@
       10.0.0.71 luna
       167.172.231.73 arabica-systems-pds
       164.90.134.123 solanaceae-pds
-      167.71.251.212 arabica-social
     '';
   };
 
