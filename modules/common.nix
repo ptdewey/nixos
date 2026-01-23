@@ -41,7 +41,6 @@
     gh
     yazi
     alacritty
-    ghostty
     zip
     ast-grep
     nmap
@@ -82,6 +81,7 @@
     feishin
     atproto-goat
     claude-code
+    iamb
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
