@@ -63,8 +63,10 @@
   environment.etc."resolv.conf" = {
     text = ''
       # nameserver 10.0.0.71
-      nameserver 1.1.1.1
-      nameserver 8.8.8.8
+      nameserver 75.75.75.75
+      nameserver 75.75.76.76
+      # nameserver 1.1.1.1
+      # nameserver 8.8.8.8
     '';
     mode = "0644";
   };
