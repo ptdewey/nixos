@@ -82,6 +82,7 @@
     atproto-goat
     claude-code
     iamb
+    tailwindcss
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
