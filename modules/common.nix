@@ -83,6 +83,8 @@
     claude-code
     iamb
     pnpm
+    dig
+    host
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
