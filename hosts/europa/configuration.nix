@@ -138,7 +138,6 @@
     python312Packages.jupytext
     qmk
     audacity
-    kdePackages.kdenlive
     vulkan-tools
     obsidian
     love
@@ -149,6 +148,7 @@
     picard
     yt-dlp
     # openmw # FIX: build is failing?
+    # kdePackages.kdenlive # FIX: build is failing (01/28/26)
   ];
 
   services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];
