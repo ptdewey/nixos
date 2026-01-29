@@ -52,7 +52,6 @@
     extraHosts = ''
       10.0.0.71 luna
       167.172.231.73 arabica-systems-pds
-      164.90.134.123 solanaceae-pds
     '';
   };
 
@@ -147,6 +146,7 @@
     proton-pass
     picard
     yt-dlp
+    templ
     # openmw # FIX: build is failing?
     # kdePackages.kdenlive # FIX: build is failing (01/28/26)
   ];
