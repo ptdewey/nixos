@@ -50,7 +50,7 @@
     # networking.firewall.enable = false;
 
     extraHosts = ''
-      192.196.4.71 luna
+      192.168.4.71 luna
       167.172.231.73 arabica-systems-pds
     '';
   };
