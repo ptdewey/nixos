@@ -147,6 +147,8 @@
     picard
     yt-dlp
     templ
+    tailwindcss
+    inkscape
     # openmw # FIX: build is failing?
     # kdePackages.kdenlive # FIX: build is failing (01/28/26)
   ];
