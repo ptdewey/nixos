@@ -13,6 +13,10 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -35,7 +39,10 @@
           ./modules/games/steam.nix
           ./modules/games/lutris.nix
 
-          { nixpkgs.hostPlatform = "x86_64-linux"; }
+          {
+            nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
+            nixpkgs.hostPlatform = "x86_64-linux";
+          }
         ];
       };
 
