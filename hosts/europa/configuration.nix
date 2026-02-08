@@ -162,6 +162,7 @@
   services.ollama = {
     package = pkgs.ollama-rocm;
     enable = true;
+    host = "0.0.0.0";
     # rocmOverrideGfx = "11.0.0";
   };
 
