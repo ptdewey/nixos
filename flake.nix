@@ -53,7 +53,10 @@
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
 
-          { nixpkgs.hostPlatform = "x86_64-linux"; }
+          {
+            nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
+            nixpkgs.hostPlatform = "x86_64-linux";
+          }
         ];
       };
 

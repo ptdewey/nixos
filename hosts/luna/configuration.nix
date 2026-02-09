@@ -5,8 +5,7 @@ let
     system = "x86_64-linux";
     config.allowUnfree = true;
   };
-in
-{
+in {
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
   ];
@@ -101,10 +100,8 @@ in
     variant = "";
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.graphics = {
-    enable = true;
-  };
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.graphics = { enable = true; };
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
@@ -120,10 +117,7 @@ in
         isNormalUser = true;
         description = "Patrick Dewey";
         extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
-        packages = with pkgs; [
-          typst
-          pandoc
-        ];
+        packages = with pkgs; [ typst pandoc ];
         shell = pkgs.zsh;
       };
     };
@@ -166,11 +160,10 @@ in
     nvtopPackages.full
     cudaPackages.cuda_nvcc
     nvidia-modprobe
+    claude-code
   ];
 
-  virtualisation.docker = {
-    enable = true;
-  };
+  virtualisation.docker = { enable = true; };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -192,9 +185,7 @@ in
   services.openssh = {
     enable = true;
     allowSFTP = true;
-    settings = {
-      PasswordAuthentication = false;
-    };
+    settings = { PasswordAuthentication = false; };
   };
 
   # services.ollama = {
