@@ -186,6 +186,15 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  programs.ssh = {
+    extraConfig = ''
+      Host nixos-shell
+          Hostname localhost
+          Port 2222
+          User git
+          IdentityFile ~/.ssh/id_ed25519.pub
+    '';
+  };
 
   # List services that you want to enable:
 
