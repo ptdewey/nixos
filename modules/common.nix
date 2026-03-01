@@ -86,6 +86,7 @@
     dig
     host
     thunderbird
+    reader
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
