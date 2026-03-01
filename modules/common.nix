@@ -23,7 +23,7 @@
     tree-sitter
     nodejs
     fastfetch
-    python312
+    python315
     gnumake
     csvlens
     jq
@@ -39,12 +39,11 @@
     inputs.zen-browser.packages."${system}".beta
     gimp
     gh
-    yazi
     alacritty
     zip
     ast-grep
     nmap
-    libreoffice
+    # libreoffice
     yaru-theme
     bibata-cursors
     typst

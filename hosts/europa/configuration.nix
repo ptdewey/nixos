@@ -134,7 +134,6 @@
     plantuml
     obs-studio
     obs-studio-plugins.obs-pipewire-audio-capture
-    python312Packages.jupytext
     qmk
     audacity
     vulkan-tools
