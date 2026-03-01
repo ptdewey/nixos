@@ -158,12 +158,12 @@
   systemd.services.lactd.wantedBy = [ "multi-user.target" ];
 
   # TODO: pin a version of ollama to avoid long build times
-  services.ollama = {
-    package = pkgs.ollama-rocm;
-    enable = true;
-    host = "0.0.0.0";
-    # rocmOverrideGfx = "11.0.0";
-  };
+  # services.ollama = {
+  #   package = pkgs.ollama-rocm;
+  #   enable = true;
+  #   host = "0.0.0.0";
+  #   # rocmOverrideGfx = "11.0.0";
+  # };
 
   virtualisation.docker.rootless = {
     enable = true;
