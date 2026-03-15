@@ -127,7 +127,7 @@
     vim
     wezterm
     spotify
-    discord
+    # discord
     nvtopPackages.amd
     xclip
     lact
