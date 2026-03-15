@@ -69,7 +69,6 @@
     acpi
     brightnessctl
     pulseaudio
-    discord
     swayfx
     spotify
     tinymist
