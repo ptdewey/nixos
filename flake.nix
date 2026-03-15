@@ -54,6 +54,7 @@
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
           ./modules/apps/discord.nix
+          ./modules/desktops/river.nix
 
           {
             nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
