@@ -53,6 +53,7 @@
           ./hosts/callisto/configuration.nix
           ./modules/desktops/gdm.nix
           ./modules/desktops/niri.nix
+          ./modules/apps/discord.nix
 
           {
             nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
