@@ -38,6 +38,7 @@
           ./modules/games/minecraft.nix
           ./modules/games/steam.nix
           ./modules/games/lutris.nix
+          ./modules/apps/discord.nix
 
           {
             nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
