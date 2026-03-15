@@ -51,7 +51,8 @@
         specialArgs = { inherit inputs; };
         modules = commonModules ++ [
           ./hosts/callisto/configuration.nix
-          ./modules/desktops/gdm.nix
+          # ./modules/desktops/gdm.nix
+          ./modules/desktops/tuigreet.nix
           ./modules/desktops/niri.nix
           ./modules/apps/discord.nix
           ./modules/desktops/river.nix
