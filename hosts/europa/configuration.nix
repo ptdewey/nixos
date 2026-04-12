@@ -149,6 +149,7 @@
     tailwindcss
     inkscape
     inputs.glide.packages.${pkgs.system}.default
+    onefetch
     # openmw # FIX: build is failing?
     # kdePackages.kdenlive # FIX: build is failing (01/28/26)
   ];
