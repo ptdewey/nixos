@@ -64,10 +64,6 @@
     fnlfmt
     cmake
     ninja
-    # gleam
-    # beam28Packages.erlang
-    # beam28Packages.elixir
-    # beam28Packages.rebar3
     jujutsu
     # nix-index
     ffmpeg
@@ -115,6 +111,8 @@
   # Dictionary word list (used with nvim)
   environment.wordlist = {
     enable = true;
-    lists = { WORDLIST = [ "${pkgs.scowl}/share/dict/words.txt" ]; };
+    lists = {
+      WORDLIST = [ "${pkgs.scowl}/share/dict/words.txt" ];
+    };
   };
 }

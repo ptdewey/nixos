@@ -1,11 +1,20 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # boot.initrd.kernelModules = [ "amdgpu" ];
 
@@ -116,7 +125,11 @@
   users.users.patrick = {
     isNormalUser = true;
     description = "Patrick Dewey";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     packages = with pkgs; [ ];
   };
 
@@ -152,9 +165,17 @@
     onefetch
     # openmw # FIX: build is failing?
     # kdePackages.kdenlive # FIX: build is failing (01/28/26)
+    gleam
+    # beam28Packages.erlang
+    # beam28Packages.elixir
+    # beam28Packages.rebar3
   ];
 
-  services.udev.packages = with pkgs; [ qmk qmk-udev-rules qmk_hid ];
+  services.udev.packages = with pkgs; [
+    qmk
+    qmk-udev-rules
+    qmk_hid
+  ];
 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = [ "multi-user.target" ];
