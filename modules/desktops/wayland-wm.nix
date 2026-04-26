@@ -23,9 +23,12 @@
     (import ./extras/waybar-mediaplayer/mediaplayer.nix { pkgs = pkgs; })
     # inputs.quickshell.packages.${pkgs.system}.default
     quickshell
+    fnott
   ];
 
-  programs.dconf.profiles.user.databases = [{
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-  }];
+  programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    }
+  ];
 }
