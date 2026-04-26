@@ -169,7 +169,6 @@
     # beam28Packages.erlang
     # beam28Packages.elixir
     # beam28Packages.rebar3
-    rpi-imager
   ];
 
   services.udev.packages = with pkgs; [
