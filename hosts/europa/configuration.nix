@@ -169,6 +169,7 @@
     # beam28Packages.erlang
     # beam28Packages.elixir
     # beam28Packages.rebar3
+    rpi-imager
   ];
 
   services.udev.packages = with pkgs; [
@@ -197,8 +198,6 @@
   programs.virt-manager.enable = true;
 
   services.tailscale.enable = true;
-
-  # services.systembus-notify.enable = true;
 
   # Allow cross compilation of armv8
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
