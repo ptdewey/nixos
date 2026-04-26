@@ -198,6 +198,8 @@
 
   services.tailscale.enable = true;
 
+  services.systembus-notify.enable = true;
+
   # Allow cross compilation of armv8
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
