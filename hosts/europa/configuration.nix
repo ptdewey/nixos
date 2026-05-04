@@ -129,6 +129,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "kvm"
     ];
     packages = with pkgs; [ ];
   };
@@ -169,6 +170,7 @@
     # beam28Packages.erlang
     # beam28Packages.elixir
     # beam28Packages.rebar3
+    qbz
   ];
 
   services.udev.packages = with pkgs; [
