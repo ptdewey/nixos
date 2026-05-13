@@ -14,66 +14,77 @@
       url = "github:sadjow/claude-code-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations = let commonModules = [ ./modules/common.nix ];
-    in {
-      # fix nix-path issues
-      nix.registry.nixpkgs.flake = nixpkgs;
-      environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
-      nix.settings.nix-path =
-        nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
-
-      # define different systems
-      europa = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = commonModules ++ [
-          ./hosts/europa/configuration.nix
-          ./modules/desktops/gnome.nix
-          ./modules/desktops/niri.nix
-          ./modules/games/minecraft.nix
-          ./modules/games/steam.nix
-          ./modules/games/lutris.nix
-          ./modules/apps/discord.nix
-
-          {
-            nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
-            nixpkgs.hostPlatform = "x86_64-linux";
-          }
-        ];
-      };
-
-      callisto = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = commonModules ++ [
-          ./hosts/callisto/configuration.nix
-          # ./modules/desktops/gdm.nix
-          ./modules/desktops/tuigreet.nix
-          ./modules/desktops/niri.nix
-          ./modules/apps/discord.nix
-          ./modules/desktops/river.nix
-
-          {
-            nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
-            nixpkgs.hostPlatform = "x86_64-linux";
-          }
-        ];
-      };
-
-      luna = inputs.nixpkgs-stable.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          nixpkgs = inputs.nixpkgs-stable;
-        };
-        modules = [ # Don't include common module on Luna
-          ./hosts/luna/configuration.nix
-          ./modules/utilities/jellyfin.nix
-          ./modules/utilities/forgejo.nix
-
-          { nixpkgs.hostPlatform = "x86_64-linux"; }
-        ];
-      };
+    workmux = {
+      url = "github:raine/workmux";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations =
+        let
+          commonModules = [ ./modules/common.nix ];
+        in
+        {
+          # fix nix-path issues
+          nix.registry.nixpkgs.flake = nixpkgs;
+          environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
+          nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
+
+          # define different systems
+          europa = nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs; };
+            modules = commonModules ++ [
+              ./hosts/europa/configuration.nix
+              ./modules/desktops/gnome.nix
+              ./modules/desktops/niri.nix
+              ./modules/games/minecraft.nix
+              ./modules/games/steam.nix
+              # ./modules/games/lutris.nix
+              ./modules/apps/discord.nix
+
+              {
+                nixpkgs.overlays = [
+                  inputs.claude-code.overlays.default
+                ];
+                nixpkgs.hostPlatform = "x86_64-linux";
+              }
+            ];
+          };
+
+          callisto = nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs; };
+            modules = commonModules ++ [
+              ./hosts/callisto/configuration.nix
+              # ./modules/desktops/gdm.nix
+              ./modules/desktops/tuigreet.nix
+              ./modules/desktops/niri.nix
+              ./modules/apps/discord.nix
+              ./modules/desktops/river.nix
+
+              {
+                nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
+                nixpkgs.hostPlatform = "x86_64-linux";
+              }
+            ];
+          };
+
+          luna = inputs.nixpkgs-stable.lib.nixosSystem {
+            specialArgs = {
+              inherit inputs;
+              nixpkgs = inputs.nixpkgs-stable;
+            };
+            modules = [
+              # Don't include common module on Luna
+              ./hosts/luna/configuration.nix
+              ./modules/utilities/jellyfin.nix
+              ./modules/utilities/forgejo.nix
+
+              { nixpkgs.hostPlatform = "x86_64-linux"; }
+            ];
+          };
+        };
+    };
 }

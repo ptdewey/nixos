@@ -49,8 +49,11 @@
       dns = "none";
     };
 
-    # nameservers = [ "10.0.0.71" "1.1.1.1" "8.8.8.8" ];
-    # dhcpcd.extraConfig = "nohook resolv.conf";
+    nameservers = [
+      "192.168.4.71"
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
 
     # Open ports in the firewall.
     # firewall.allowedTCPPorts = [ 8000 ];
@@ -67,17 +70,6 @@
   hardware.bluetooth.enable = true;
   # hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
-
-  environment.etc."resolv.conf" = {
-    text = ''
-      # nameserver 10.0.0.71
-      # nameserver 75.75.75.75
-      # nameserver 75.75.76.76
-      nameserver 1.1.1.1
-      nameserver 8.8.8.8
-    '';
-    mode = "0644";
-  };
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -154,7 +146,7 @@
     obsidian
     love
     protonmail-desktop
-    protonvpn-gui
+    proton-vpn
     proton-authenticator
     proton-pass
     picard
