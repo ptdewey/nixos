@@ -2,9 +2,13 @@
   inputs,
   config,
   pkgs,
+  lib,
   ...
 }:
 
+let
+  defaultBrowser = "glide-browser.desktop";
+in
 {
   imports = [
     # Include the results of the hardware scan.
@@ -128,6 +132,15 @@
 
   programs.firefox.enable = true;
   nixpkgs.config.allowUnfree = true;
+
+  xdg.mime.defaultApplications = {
+    "text/html" = defaultBrowser;
+    "x-scheme-handler/http" = defaultBrowser;
+    "x-scheme-handler/https" = defaultBrowser;
+    "x-scheme-handler/about" = defaultBrowser;
+    "x-scheme-handler/unknown" = defaultBrowser;
+  };
+  environment.sessionVariables.BROWSER = lib.removeSuffix ".desktop" defaultBrowser;
 
   environment.systemPackages = with pkgs; [
     vim
