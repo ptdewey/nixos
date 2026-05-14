@@ -172,8 +172,8 @@ in
     # openmw # FIX: build is failing?
     # kdePackages.kdenlive # FIX: build is failing (01/28/26)
     gleam
-    # beam28Packages.erlang
-    # beam28Packages.elixir
+    beam28Packages.erlang
+    beam28Packages.elixir
     # beam28Packages.rebar3
     qbz
   ];
