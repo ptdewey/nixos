@@ -174,7 +174,7 @@ in
     gleam
     beam28Packages.erlang
     beam28Packages.elixir
-    # beam28Packages.rebar3
+    beam28Packages.rebar3
     qbz
   ];
 
