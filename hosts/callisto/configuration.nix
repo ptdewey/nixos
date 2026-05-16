@@ -86,6 +86,7 @@
     beam28Packages.erlang
     beam28Packages.elixir
     beam28Packages.rebar3
+    bun
   ];
 
   services.power-profiles-daemon.enable = true;
