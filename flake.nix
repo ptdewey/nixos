@@ -25,7 +25,10 @@
     {
       nixosConfigurations =
         let
-          commonModules = [ ./modules/common.nix ];
+          commonModules = [
+            ./modules/common.nix
+            ./modules/services/local-observability.nix
+          ];
         in
         {
           # fix nix-path issues

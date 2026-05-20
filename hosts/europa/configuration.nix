@@ -101,6 +101,8 @@ in
 
   services.printing.enable = true;
 
+  services.local-observability.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
