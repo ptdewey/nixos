@@ -61,13 +61,25 @@ in
     };
 
     grafanaDashboardsDir = lib.mkOption {
-      type = lib.types.nullOr lib.types.path;
-      default = null;
-      description = "Optional path to a directory of Grafana dashboard JSON files.";
+      type = lib.types.nullOr lib.types.str;
+      default = "/var/lib/grafana/dashboards";
+      example = "/var/lib/grafana/dashboards";
+      description = "Runtime path to a directory of Grafana dashboard JSON files.";
     };
   };
 
   config = lib.mkIf cfg.enable {
+    assertions = [
+      {
+        assertion = lib.hasPrefix "/" cfg.grafanaDashboardsDir;
+        message = "services.local-observability.grafanaDashboardsDir must be an absolute runtime path.";
+      }
+    ];
+
+    systemd.tmpfiles.rules = [
+      "d ${cfg.grafanaDashboardsDir} 0755 patrick grafana -"
+    ];
+
     services.opentelemetry-collector = {
       enable = true;
       package = pkgs.opentelemetry-collector-contrib;
@@ -179,7 +191,7 @@ in
             }
           ];
         };
-        dashboards.settings = lib.mkIf (cfg.grafanaDashboardsDir != null) {
+        dashboards.settings = {
           apiVersion = 1;
           providers = [
             {
@@ -189,6 +201,7 @@ in
               type = "file";
               disableDeletion = false;
               updateIntervalSeconds = 10;
+              allowUiUpdates = true;
               options.path = cfg.grafanaDashboardsDir;
             }
           ];
