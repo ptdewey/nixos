@@ -19,17 +19,15 @@ in
     "flakes"
   ];
 
-  # boot.initrd.kernelModules = [ "amdgpu" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
 
+  # boot.initrd.kernelModules = [ "amdgpu" ];
   # hardware.graphics.extraPackages = with pkgs; [
   #   amdvlk
   # ];
-
   # hardware.graphics.extraPackages32 = with pkgs; [
   #   driversi686Linux.amdvlk
   # ];
@@ -41,10 +39,6 @@ in
   networking = {
     hostName = "europa";
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Enable networking
     networkmanager = {
@@ -151,7 +145,6 @@ in
     nvtopPackages.amd
     xclip
     lact
-    plantuml
     obs-studio
     obs-studio-plugins.obs-pipewire-audio-capture
     qmk

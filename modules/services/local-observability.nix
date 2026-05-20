@@ -62,8 +62,8 @@ in
 
     grafanaDashboardsDir = lib.mkOption {
       type = lib.types.nullOr lib.types.str;
-      default = "/var/lib/grafana/dashboards";
-      example = "/var/lib/grafana/dashboards";
+      default = "/var/lib/grafana-dashboards";
+      example = "/var/lib/grafana-dashboards";
       description = "Runtime path to a directory of Grafana dashboard JSON files.";
     };
   };
