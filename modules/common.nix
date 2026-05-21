@@ -85,6 +85,8 @@
     templ
     libnotify
     # inputs.workmux.packages.${pkgs.system}.default
+    rtk
+    codex
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)

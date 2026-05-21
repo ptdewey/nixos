@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   pkgs,
   lib,
   ...
@@ -20,17 +19,15 @@ in
     "flakes"
   ];
 
-  # boot.initrd.kernelModules = [ "amdgpu" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
 
+  # boot.initrd.kernelModules = [ "amdgpu" ];
   # hardware.graphics.extraPackages = with pkgs; [
   #   amdvlk
   # ];
-
   # hardware.graphics.extraPackages32 = with pkgs; [
   #   driversi686Linux.amdvlk
   # ];
@@ -42,10 +39,6 @@ in
   networking = {
     hostName = "europa";
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Enable networking
     networkmanager = {
@@ -101,6 +94,8 @@ in
 
   services.printing.enable = true;
 
+  services.local-observability.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -150,7 +145,6 @@ in
     nvtopPackages.amd
     xclip
     lact
-    plantuml
     obs-studio
     obs-studio-plugins.obs-pipewire-audio-capture
     qmk
@@ -172,9 +166,9 @@ in
     # openmw # FIX: build is failing?
     # kdePackages.kdenlive # FIX: build is failing (01/28/26)
     gleam
-    # beam28Packages.erlang
-    # beam28Packages.elixir
-    # beam28Packages.rebar3
+    beam28Packages.erlang
+    beam28Packages.elixir
+    beam28Packages.rebar3
     qbz
   ];
 
