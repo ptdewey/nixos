@@ -24,13 +24,11 @@ in
     enable32Bit = true;
   };
 
+  boot.kernelModules = [ "kvm-amd" ];
+
   # boot.initrd.kernelModules = [ "amdgpu" ];
-  # hardware.graphics.extraPackages = with pkgs; [
-  #   amdvlk
-  # ];
-  # hardware.graphics.extraPackages32 = with pkgs; [
-  #   driversi686Linux.amdvlk
-  # ];
+  # hardware.graphics.extraPackages = with pkgs; [ amdvlk ];
+  # hardware.graphics.extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -170,8 +168,10 @@ in
     beam28Packages.elixir
     beam28Packages.rebar3
     qbz
+    qemu_kvm
   ];
 
+  # TODO: I don't think I actually use these
   services.udev.packages = with pkgs; [
     qmk
     qmk-udev-rules
