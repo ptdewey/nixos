@@ -81,6 +81,7 @@
     tinymist
     wezterm
     inputs.noctalia.packages.${system}.default
+    inputs.glide.packages.${pkgs.system}.default
 
     gleam
     beam28Packages.erlang
@@ -92,9 +93,9 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
-  programs.steam = {
-    enable = true;
-  };
+  # programs.steam = {
+  #   enable = true;
+  # };
 
   services.gvfs.enable = true;
   services.udisks2.enable = true;
