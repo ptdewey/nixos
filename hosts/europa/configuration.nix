@@ -217,6 +217,11 @@ in
           Port 2222
           User git
           IdentityFile ~/.ssh/id_ed25519.pub
+
+      Host knot.example.com
+          HostName knot.solanaceae.net
+          User git
+          Port 2222
     '';
   };
 
