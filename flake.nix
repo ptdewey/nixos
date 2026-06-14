@@ -10,10 +10,6 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    claude-code = {
-      url = "github:sadjow/claude-code-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     workmux = {
       url = "github:raine/workmux";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,9 +45,6 @@
               ./modules/apps/discord.nix
 
               {
-                nixpkgs.overlays = [
-                  inputs.claude-code.overlays.default
-                ];
                 nixpkgs.hostPlatform = "x86_64-linux";
               }
             ];
@@ -68,7 +61,7 @@
               ./modules/desktops/river.nix
 
               {
-                nixpkgs.overlays = [ inputs.claude-code.overlays.default ];
+                nixpkgs.overlays = [ ];
                 nixpkgs.hostPlatform = "x86_64-linux";
               }
             ];

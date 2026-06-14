@@ -1,16 +1,25 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   unstablePkgs = import inputs.nixpkgs {
     system = "x86_64-linux";
     config.allowUnfree = true;
   };
-in {
+in
+{
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Bootloader
   boot = {
@@ -26,10 +35,12 @@ in {
         zfsSupport = true;
         efiSupport = true;
         efiInstallAsRemovable = true;
-        mirroredBoots = [{
-          devices = [ "nodev" ];
-          path = "/boot";
-        }];
+        mirroredBoots = [
+          {
+            devices = [ "nodev" ];
+            path = "/boot";
+          }
+        ];
       };
       # systemd-boot.enable = true;
       # efi.canTouchEfiVariables = true;
@@ -44,11 +55,13 @@ in {
     networkmanager.enable = true;
     interfaces = {
       enp34s0 = {
-        ipv4.addresses = [{
-          address = "10.0.0.71";
-          # address = "192.168.68.54";
-          prefixLength = 24;
-        }];
+        ipv4.addresses = [
+          {
+            address = "10.0.0.71";
+            # address = "192.168.68.54";
+            prefixLength = 24;
+          }
+        ];
       };
     };
     # defaultGateway = "192.168.68.1";
@@ -65,8 +78,18 @@ in {
       allowPing = true;
 
       # Open ports in the firewall.
-      allowedTCPPorts = [ 22 3000 11975 21975 ];
-      allowedUDPPorts = [ 22 3000 11975 21975 ];
+      allowedTCPPorts = [
+        22
+        3000
+        11975
+        21975
+      ];
+      allowedUDPPorts = [
+        22
+        3000
+        11975
+        21975
+      ];
     };
   };
 
@@ -101,7 +124,9 @@ in {
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.graphics = { enable = true; };
+  hardware.graphics = {
+    enable = true;
+  };
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
@@ -116,8 +141,16 @@ in {
       patrick = {
         isNormalUser = true;
         description = "Patrick Dewey";
-        extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
-        packages = with pkgs; [ typst pandoc ];
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+          "libvirtd"
+          "docker"
+        ];
+        packages = with pkgs; [
+          typst
+          pandoc
+        ];
         shell = pkgs.zsh;
       };
     };
@@ -160,10 +193,11 @@ in {
     nvtopPackages.full
     cudaPackages.cuda_nvcc
     nvidia-modprobe
-    claude-code
   ];
 
-  virtualisation.docker = { enable = true; };
+  virtualisation.docker = {
+    enable = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -185,7 +219,9 @@ in {
   services.openssh = {
     enable = true;
     allowSFTP = true;
-    settings = { PasswordAuthentication = false; };
+    settings = {
+      PasswordAuthentication = false;
+    };
   };
 
   # services.ollama = {

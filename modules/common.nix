@@ -75,7 +75,6 @@
     nh
     feishin
     atproto-goat
-    claude-code
     # iamb
     pnpm
     dig
