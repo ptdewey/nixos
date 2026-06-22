@@ -88,6 +88,7 @@ in
       "wheel"
       "video"
       "render"
+      "hermes"
     ];
     packages = with pkgs; [
       tree
@@ -150,8 +151,12 @@ in
   ];
 
   sops = {
-    age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
-    defaultSopsFile = ./secrets/secrets.yaml;
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    age = {
+      sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+      keyFile = "/var/lib/sops-nix/key.txt";
+      generateKey = true;
+    };
   };
 
   # ROCM stuff

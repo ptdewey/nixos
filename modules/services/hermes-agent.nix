@@ -1,19 +1,19 @@
 { config, ... }:
 
 {
-  sops = {
-    secrets."hermes.env" = {
-      format = "binary";
-      sopsFile = toString ../../secrets/hermes.env;
-      restartUnits = [ "hermes-agent.service" ];
-    };
+  sops.secrets.hermes = {
+    format = "dotenv";
+    sopsFile = ../../secrets/hermes.env;
   };
 
   services.hermes-agent = {
     enable = true;
     addToSystemPackages = true;
-    extraDependencyGroups = [ "matrix" ];
-    environmentFiles = [ config.sops.secrets."hermes.env".path ];
+    extraDependencyGroups = [
+      "messaging"
+      "matrix"
+    ];
+    environmentFiles = [ config.sops.secrets.hermes.path ];
 
     settings = {
       model.default = "openai/gpt-5.5";

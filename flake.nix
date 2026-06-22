@@ -94,10 +94,10 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./hosts/calypso/configuration.nix
-              # ./modules/services/hermes-agent.nix
+              ./modules/services/hermes-agent.nix
 
               inputs.sops-nix.nixosModules.sops
-              # inputs.hermes-agent.nixosModules.default
+              inputs.hermes-agent.nixosModules.default
 
               {
                 nixpkgs.overlays = [ ];
