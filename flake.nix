@@ -81,6 +81,18 @@
               { nixpkgs.hostPlatform = "x86_64-linux"; }
             ];
           };
+
+          calypso = nixpkgs.lib.nixosSystem {
+            specialArgs = { inherit inputs; };
+            modules = [
+              ./hosts/calypso/configuration.nix
+
+              {
+                nixpkgs.overlays = [ ];
+                nixpkgs.hostPlatform = "x86_64-linux";
+              }
+            ];
+          };
         };
     };
 }
