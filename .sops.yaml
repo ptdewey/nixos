@@ -1,0 +1,9 @@
+keys:
+  - &europa age1uh3jx8t6z28jv7fqm8yns0ud60yz28g2hg97m43wtku66245pa4sfczc6e 
+  - &calypso_etc age19hugmvp0k5k2tk4zhv7axgxyw7lg6vvlq4qa6ehdahcaz9a4zfgsm6hmz7
+creation_rules:
+  - path_regex: secrets/.*$
+    key_groups:
+      - age:
+          - *europa
+          - *calypso_etc

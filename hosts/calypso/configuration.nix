@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   rocmEnv = pkgs.symlinkJoin {
@@ -21,11 +26,12 @@ let
       rocm-comgr
     ];
   };
-in {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+in
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -78,7 +84,11 @@ in {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.patrick = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "render" ]; 
+    extraGroups = [
+      "wheel"
+      "video"
+      "render"
+    ];
     packages = with pkgs; [
       tree
     ];
@@ -131,9 +141,18 @@ in {
     python313Packages.huggingface-hub
     llmfit
     fzf
+    btop
+    nil
+    sops
 
+    # Load rocm packages
     rocmEnv
   ];
+
+  sops = {
+    age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+    defaultSopsFile = ./secrets/secrets.yaml;
+  };
 
   # ROCM stuff
   environment.variables = {
@@ -182,7 +201,12 @@ in {
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 4000 5173 8000 8080 ];
+  networking.firewall.allowedTCPPorts = [
+    4000
+    5173
+    8000
+    8080
+  ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

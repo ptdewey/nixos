@@ -14,8 +14,12 @@
       url = "github:raine/workmux";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zennnotes = {
-      url = "github:ptdewey/zennotes-flake/push-mvmmpzvovxkl";
+    hermes-agent = {
+      url = "github:NousResearch/hermes-agent";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -90,6 +94,10 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./hosts/calypso/configuration.nix
+              # ./modules/services/hermes-agent.nix
+
+              inputs.sops-nix.nixosModules.sops
+              # inputs.hermes-agent.nixosModules.default
 
               {
                 nixpkgs.overlays = [ ];
