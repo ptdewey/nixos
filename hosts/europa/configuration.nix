@@ -169,6 +169,7 @@ in
     beam28Packages.rebar3
     qbz
     qemu_kvm
+    rusty-path-of-building
   ];
 
   # TODO: I don't think I actually use these

@@ -14,6 +14,10 @@
       url = "github:raine/workmux";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zennnotes = {
+      url = "github:ptdewey/zennotes-flake/push-mvmmpzvovxkl";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
