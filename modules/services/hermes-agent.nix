@@ -18,8 +18,10 @@
     settings = {
       model = {
         provider = "custom";
-        default = "unsloth/Qwen3-Coder-Next-GGUF:Q8_0";
-        base_url = "http://127.0.0.1:8000/v1";
+        # default = "unsloth/Qwen3-Coder-Next-GGUF:Q8_0";
+        # default = "unsloth/gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL";
+        default = "unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-Q8_K_XL";
+        base_url = "http://127.0.0.1:8080/v1";
         api_key = "123abc";
       };
       terminal = {
