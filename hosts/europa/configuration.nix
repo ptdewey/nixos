@@ -170,6 +170,7 @@ in
     qbz
     qemu_kvm
     rusty-path-of-building
+    inputs.hunk.packages.${pkgs.stdenv.hostPlatform.system}.hunk
   ];
 
   # TODO: I don't think I actually use these
