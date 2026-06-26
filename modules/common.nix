@@ -82,7 +82,6 @@
     thunderbird
     reader
     templ
-    libnotify
     # inputs.workmux.packages.${pkgs.system}.default
     rtk
     codex
