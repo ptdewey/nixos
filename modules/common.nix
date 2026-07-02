@@ -75,17 +75,16 @@
     nh
     feishin
     atproto-goat
-    # iamb
     pnpm
     dig
     host
     thunderbird
     reader
     templ
-    libnotify
     # inputs.workmux.packages.${pkgs.system}.default
     rtk
     codex
+    herdr
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)

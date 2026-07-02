@@ -33,6 +33,7 @@ in
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
 
   networking = {
     hostName = "europa";
@@ -170,6 +171,7 @@ in
     qbz
     qemu_kvm
     rusty-path-of-building
+    inputs.hunk.packages.${pkgs.stdenv.hostPlatform.system}.hunk
   ];
 
   # TODO: I don't think I actually use these
