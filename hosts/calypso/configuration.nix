@@ -145,6 +145,10 @@ in
     btop
     nil
     sops
+    gleam
+    erlang
+    beam28Packages.rebar
+    beam28Packages.elixir
 
     # Load rocm packages
     rocmEnv
