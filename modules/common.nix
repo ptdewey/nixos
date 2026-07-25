@@ -80,8 +80,6 @@
     host
     thunderbird
     templ
-    # inputs.workmux.packages.${pkgs.system}.default
-    rtk
     codex
     herdr
   ];

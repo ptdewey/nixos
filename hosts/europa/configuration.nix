@@ -168,10 +168,10 @@ in
     beam28Packages.erlang
     beam28Packages.elixir
     beam28Packages.rebar3
-    qbz
     qemu_kvm
     rusty-path-of-building
     inputs.hunk.packages.${pkgs.stdenv.hostPlatform.system}.hunk
+    inputs.qbz.packages.${pkgs.system}.default
   ];
 
   # TODO: I don't think I actually use these

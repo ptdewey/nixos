@@ -20,7 +20,7 @@
     wl-clipboard
     awww
 
-    (import ./extras/waybar-mediaplayer/mediaplayer.nix { pkgs = pkgs; })
+    # (import ./extras/waybar-mediaplayer/mediaplayer.nix { pkgs = pkgs; })
     quickshell
     fnott
   ];

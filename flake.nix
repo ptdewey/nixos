@@ -10,10 +10,6 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    workmux = {
-      url = "github:raine/workmux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hermes-agent = {
       url = "github:NousResearch/hermes-agent";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +20,10 @@
     };
     hunk = {
       url = "github:modem-dev/hunk";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
+    qbz = {
+      url = "github:vicrodh/qbz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
