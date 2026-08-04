@@ -20,7 +20,8 @@
     wl-clipboard
     awww
 
-    # (import ./extras/waybar-mediaplayer/mediaplayer.nix { pkgs = pkgs; })
+    # Go MPRIS media status/control binary for the waybar `custom/media` module.
+    (import ./extras/waybar-mediaplayer/package.nix { pkgs = pkgs; })
     quickshell
     fnott
   ];
