@@ -172,6 +172,7 @@ in
     rusty-path-of-building
     inputs.hunk.packages.${pkgs.stdenv.hostPlatform.system}.hunk
     inputs.qbz.packages.${pkgs.system}.default
+    helix
   ];
 
   # TODO: I don't think I actually use these
