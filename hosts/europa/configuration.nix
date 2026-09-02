@@ -120,7 +120,6 @@ in
       "wheel"
       "docker"
       "kvm"
-      "dialout"
     ];
     packages = with pkgs; [ ];
   };

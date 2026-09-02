@@ -82,6 +82,7 @@
     templ
     codex
     herdr
+    bazecor
   ];
 
   # Add missing dynamic libs (do not include in environment.systemPackages)
