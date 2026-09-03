@@ -11,7 +11,7 @@
     users.patrick = {
       home = {
         homeDirectory = "/home/patrick";
-        stateVersion = "24.05";
+        stateVersion = "26.11";
         username = "patrick";
       };
 
