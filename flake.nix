@@ -22,6 +22,15 @@
       url = "github:vicrodh/qbz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dotfiles = {
+      url = "github:ptdewey/dotfiles";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
@@ -32,19 +41,21 @@
           commonModules = [
             ./modules/common.nix
             ./modules/services/local-observability.nix
+            {
+              # Keep the flake's nixpkgs available through the registry and NIX_PATH.
+              nix.registry.nixpkgs.flake = nixpkgs;
+              environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
+              nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
+            }
           ];
         in
         {
-          # fix nix-path issues
-          nix.registry.nixpkgs.flake = nixpkgs;
-          environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
-          nix.settings.nix-path = nixpkgs.lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
-
           # define different systems
           europa = nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = commonModules ++ [
               ./hosts/europa/configuration.nix
+              ./hosts/europa/home.nix
               ./modules/desktops/gnome.nix
               ./modules/desktops/niri.nix
               ./modules/games/minecraft.nix
