@@ -41,11 +41,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788482863,
-        "narHash": "sha256-m9wlI/mTG4SKtaGWKck8nFasV73o8ivXho6b3Fu/o/M=",
+        "lastModified": 1788483775,
+        "narHash": "sha256-dlM23ePiMBllbaUbg7cFbn4/g3Bb2AjckPUH6eB7ucU=",
         "owner": "ptdewey",
         "repo": "dotfiles",
-        "rev": "5a1365ae4afb3aca9249c3ce3ae3fbe6fe5a862b",
+        "rev": "4d143ecf5e22426abd8714cd0431bb9e3204aaf2",
         "type": "github"
       },
       "original": {
